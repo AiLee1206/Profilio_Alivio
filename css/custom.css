@@ -236,3 +236,25 @@ body,h1,h2,h3,h4,h5,h6 {
 .slide-btn .round {
   border-radius: 50%;
 }
+/* Thesis style */
+.gitHubIcon {
+  margin-left: 55px;
+}
+.thesis_title {
+  color: #474648;
+  font-weight: 600;
+}
+.thesis_keyword {
+  margin-left: 16px!important;
+  color: #3371A5;
+}
+.thesis_img {
+  border: 1px solid #d3dce4;
+}
+.thesis_content {
+  border-left: 1px solid #cccccc;
+  padding: 6px 16px;
+  color: #474648;
+  height:210px;
+  overflow: scroll;
+}
