@@ -40,7 +40,9 @@ body,h1,h2,h3,h4,h5,h6 {
   color: #1e4373!important;
   font-weight: 600;
 }
-.ai-slider a {
+.ai-slider a,
+.ai-link a,
+.downloadBtn a {
   text-decoration: none;
 }
 .ai-slider a:hover {
@@ -109,9 +111,6 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 .quantity {
   color:#bfae7e;
-}
-.ai-link a {
-  text-decoration: none;
 }
 .ai-link h6:hover {
   color: #3371a5;
@@ -235,4 +234,52 @@ body,h1,h2,h3,h4,h5,h6 {
 
 .slide-btn .round {
   border-radius: 50%;
+}
+/* Thesis style */
+.gitHubIcon {
+  margin-left: 55px;
+}
+.thesis_title {
+  color: #474648;
+  font-weight: 600;
+}
+.thesis_keyword {
+  margin-left: 16px!important;
+  color: #3371A5;
+}
+.thesis_img {
+  border: 1px solid #d3dce4;
+}
+.thesis_content {
+  border-left: 1px solid #cccccc;
+  padding: 6px 16px;
+  color: #474648;
+  height:210px;
+  overflow: scroll;
+}
+/* Go to top */
+.gotoTop {
+  position: fixed;
+  bottom: 10px;
+  right: 1.4%;
+  width: 30px;
+  height: 30px;
+  background: #1e4373;
+  color: #fff;
+  opacity: 70%;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 900;
+}
+/* Company filter style */
+.w3-blue, .w3-hover-blue:hover {
+  color: #fff!important;
+  background-color: #0086ff!important;
+  border-radius: 5px;
+}
+.w3-white, .w3-hover-white:hover {
+  border-radius: 5px;
+}
+.w3-margin-right {
+  margin-right: 10px!important;
 }
