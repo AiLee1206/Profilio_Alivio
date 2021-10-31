@@ -28,3 +28,12 @@ function onClick(element) {
 //   const portfolioImg =  portfolioChildren.children[0].src;
 //   console.log(portfolioImg);
 // }
+
+// 作品集選單開闔
+$('#careers').click(function(){
+  $(this).parent().find('ul').toggle('slow');
+  /* parent父元素-往上  find後代 往下 */         
+});
+$('#personalJobs').click(function(){
+  $(this).parent().find('ul').toggle('slow');         
+});

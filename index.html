@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/custom.css">
@@ -45,52 +45,78 @@
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left ai-margin" style="z-index:3; width:300px;" id="mySidebar"><br>
-  <div class="w3-container slider-close">
+  <div class="w3-container slider-close aiLogo-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <a href="https://ailee1206.github.io/Profilio_Alivio"><img src="images/aiRongPhoto.jpg" class="w3-round ai-round"></a>
+    <img src="images/ai_logo.png" class="aiLogo">
+    <a href="https://ailee1206.github.io/Profilio_Alivio"><img src="images/ai_personal.png" class="w3-round ai-round"></a>
     <a href="https://drive.google.com/file/d/12FD6HkIaHUpn1fh4pGD73G7MdTpmnLLM/view?usp=sharing" target="_blank"><span class="pdf">PDF</span></a>
     <br>
     <h3 class="myName">
-      <b>AI RONG LI</b>
+      <b>Ai Rong Li</b>
       <a class="gitHubIcon" href="https://github.com/AiLee1206" target="_blank"><i class="fa fa-github w3-hover-github"></i></a>
     </h3>
-    <h4 class="job_title">Senior UX/SW Designer</h4>
+    <h4 class="job_title">Senior Software Engineer</h4>
   </div>
+  <hr>
 
   <div class="w3-bar-block ai-slider">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+<!--     <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
       <i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO <span class="quantity">(27)</span>
+    </a> -->
+    <a href="#about" class="w3-bar-item w3-button w3-padding">
+      <i class="fa fa-user fa-fw w3-margin-right"></i>About Me
     </a> 
-    <a href="#delta_01" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
-      <i class="fa fa-fw w3-margin-right"></i>- DELTA (2016 - 2020) <span class="quantity">(3)</span>
-    </a>
-    <a href="#evga_01" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-fw w3-margin-right"></i>- EVGA (2014 - 2016) <span class="quantity">(3)</span></a>
-    <a href="#acti_01" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-fw w3-margin-right"></i>- ACTi (2011 - 2013) <span class="quantity">(12)</span></a>
-    <a href="#line_sticker" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-fw w3-margin-right"></i>- LINE Sticker (2020 - now) <span class="quantity">(3)</span></a>
-    <a href="#web" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-fw w3-margin-right"></i>- Web Design (2009 - 2020) <span class="quantity">(3)</span></a>
-    <a href="#award" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-fw w3-margin-right"></i>- Awards (2009 - 2010) <span class="quantity">(3)</span></a>
+    <ul>
+      <li>
+        <span id="careers" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-briefcase w3-margin-right"></i>My Careers</span>
+        <ul class="careers_li">
+          <li>
+            <a href="#delta_01" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
+              <i class="fa fa-fw w3-margin-right"></i>DELTA (2016 - 2020) <!-- <span class="quantity">(3)</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="#evga_01" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-fw w3-margin-right"></i>EVGA (2014 - 2016) <!-- <span class="quantity">(3)</span> --></a>
+          </li>
+          <li>
+            <a href="#acti_01" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-fw w3-margin-right"></i>ACTi (2011 - 2013) <!-- <span class="quantity">(12)</span> --></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span id="personalJobs" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-user-md w3-margin-right"></i>Personal Jobs</span> 
+        <ul class="cpersonalJobs_li">
+          <li>
+            <a href="#line_sticker" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
+              <i class="fa fa-fw w3-margin-right"></i>LINE Sticker (2020 - now) <!-- <span class="quantity">(3) --></span>
+            </a>
+          </li>
+          <li>
+            <a href="#web" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-fw w3-margin-right"></i>Web Design (2009 - 2020) <!-- <span class="quantity">(3) --></span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
 
+    <a href="#award" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-fw fa-trophy w3-margin-right"></i>Awards (2009 - 2010) <!-- <span class="quantity">(3)</span> --></a>
     <!-- No.8 child -->
     <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
-      <i class="fa fa-th-large fa-fw w3-margin-right"></i>RSEARCH <span class="quantity">(1)</span>
+      <i class="fa fa-th-large fa-university w3-margin-right"></i>Research <!-- <span class="quantity">(1)</span> -->
     </a> 
 <!--     <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
       <i class="fa fa-fw w3-margin-right"></i>- E-commerce Model (2020) <span class="quantity">(1)</span>
     </a> -->
 
     <!-- No.10 child -->
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
-      <i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT
-    </a> 
     <hr>
-    <div href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home fa-fw w3-margin-right"></i>Taipei, TW</div>
-    <div href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-phone fa-fw w3-margin-right"></i>+886-953-071-276</div> 
-    <a href="mailto:sharon1206_6@hotmail.com" target="_blank"><div href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw w3-margin-right"></i>sharon1206_6@hotmail.com</div></a>
-
+    <div class="w3-bar-item w3-padding"><i class="fa fa-home fa-fw w3-margin-right"></i>Taipei, TW</div>
+    <div class="w3-bar-item w3-padding"><i class="fa fa-phone fa-fw w3-margin-right"></i>+886-953-071-276</div> 
+    <a href="mailto:sharon1206_6@hotmail.com" target="_blank"><div class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw w3-margin-right"></i>sharon1206_6@hotmail.com</div></a>
   </div>
-  <div class="w3-panel w3-large">
+  <hr>
+  <div class="w3-panel w3-large ai-community">
     <a href="https://www.facebook.com/aissa.li.5/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/ato1206/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
     <a href="https://www.linkedin.com/in/ai-rong-lee-081463119/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
@@ -101,25 +127,52 @@
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+<div class="w3-main ai-main">
 
   <!-- Header -->
   <header id="portfolio">
     <a href="https://ailee1206.github.io/Profilio_Alivio"><img src="images/aiRongPhoto.jpg" style="width:66px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-      <h3><b>Ai Rong Portfolio (2009 - 2021)</b></h3>
+<!--     <div class="w3-container">
+      <h2>AI RONG - Portfolio <span class="font-small">(2009 - 2021)</span></h2>
       <div id="myJobs"class="w3-section w3-bottombar w3-padding-16">
         <span class="w3-margin-right">Company:</span>
-        <a href="#delta_01"><button class="w3-button w3-blue"><i class="fa fa-plug w3-margin-right"></i>DELTA</button></a>
+        <a href="#delta_01"><button class="w3-button w3-blue"><i class="fa fa-plug w3-margin-right"></i>Delta</button></a>
         <a href="#evga_01"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-laptop w3-margin-right"></i>EVGA</button></a>
         <a href="#acti_01"><button class="w3-button w3-white w3-hide-small"><i class="fa fa-video-camera w3-margin-right"></i>ACTi</button></a>
       </div>
-    </div>
+    </div> -->
   </header>
 
+  <!-- Images of Me -->
+  <div class="w3-container ai-container ai-about">
+    <div class="w3-row-padding" id="about">
+      <div class="w3-col m6">
+        <h4 class="about-title">About Me</h4>
+        <h2>AI RONG LI - Portfolio <span class="font-small">(2009 - 2021)</span></h2>
+        
+        <div>
+          <p>I am Ai Rong Li (Alivio), Multiple projects UX designer & Front-End Engineer from TWN currently based in Tainan city. I am a UX design professional with over 8 years of experience in interaction design & development, service design, design research, project management, customer focus, and technical training. I work closely with other colleagues involved in projects, such as create and implement the design.
+          <br/><br/>
+          1. Understand market competition, customer needs, contributing to the definition of new product technical characteristics to create new products.
+          <br/>
+          2. New product development process from project specification to product launch.
+          </p>
+        </div>
+      </div>
+      <div class="w3-col m5 ai-about-image">
+        <img src="images/aiRong1.jpg" alt="Me" style="width:100%">
+      </div>
+    </div>
+  </div>
+
   <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min" id="delta_01">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="delta_01">
+    <div class="w3-row-padding">
+      <div class="w3-col">
+        <h2>Delta <span class="font-small">(2016 - 2021)</span></h2>
+      </div>
+    </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
       <img src="images/delta_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="POWER MONITOR (Touch Panel for different user)">
       <div class="w3-container w3-white ai-content">
@@ -150,9 +203,14 @@
   </div>
 
   <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min" id="evga_01">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="evga_01">
+    <div class="w3-row-padding">
+      <div class="w3-col">
+        <h2>EVGA <span class="font-small">(2014 - 2016)</span></h2>
+      </div>
+    </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/evga_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="EVGA Official Site">
+      <img src="images/evga_motherboards.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="EVGA Official Site">
       <div class="w3-container w3-white ai-content">
         <a href="https://www.evga.com" target="_blank">
           <h6 class="font-bold">EVGA Official Website (EVGA)</h6>
@@ -161,18 +219,18 @@
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/evga_02.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Create EVGA Products Concept<br>https://www.evga.com">
+      <img src="images/evga_laptop.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Create EVGA Products Concept<br>https://www.evga.com">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.evga.com/articles/00982/evga-sc17-laptop/" target="_blank">
+        <a href="https://www.evga.com/articles/00982/evga-sc17-laptop" target="_blank">
           <h6 class="font-bold">Create Products Concept (EVGA)</h6>
         </a>
         <p>Design Admin internal system, Employees' Welfare, and products Photography. Take the products photography for display card, and laptop, etc. And display card page on Amazon/ JD.com</p>
       </div>
     </div>
     <div class="w3-third w3-container ai-link">
-      <img src="images/evga_03.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Promote NVIDIA Bundles">
+      <img src="images/evga_nvidia_theDIVISION.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Promote NVIDIA Bundles">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.evga.com/articles/00938/Batman-Arkham-Knight" target="_blank">
+        <a href="https://www.evga.com/articles/00983/the-division" target="_blank">
           <h6 class="font-bold">Promote NVIDIA Bundles (EVGA)</h6>
         </a>
         <p>Promote NVIDIA bundles, such as BATMAN. For a limited time, get the epic conclusion to the Rocksteady Batman™: Arkham Trilogy with qualifying purchases of GeForce GTX 980 Ti, 980, 970, or 960 GPU.</p>
@@ -181,7 +239,7 @@
   </div>
 
   <!-- Third Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min" id="acti_01">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="acti_01">
     <div class="w3-third w3-container w3-margin-bottom ai-link">
       <img src="images/ACTi_11.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="NVR Server for IP, iPad, iPhone, Android, Tablet">
       <div class="w3-container w3-white ai-content">
@@ -215,7 +273,7 @@
   </div>
 
   <!-- Fourth Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min">
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
       <img src="images/ACTi_06.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="APP Prototype: Mobile Go (ACTi)<br>https://www.acti.com">
       <div class="w3-container w3-white ai-content">
@@ -246,7 +304,7 @@
   </div>
 
   <!-- Fourth-2 Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min">
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
       <img src="images/acti_infoArch.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="IVS: Intelligent Video Surveillance System (ACTi)">
       <div class="w3-container w3-white ai-content">
@@ -277,7 +335,7 @@
   </div>
 
   <!-- Fiveth Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min">
     <div class="w3-third w3-container ai-link">
       <img src="images/ACTi_09.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Algorithm Settings (ACTi)<br>https://www.acti.com">
       <div class="w3-container w3-white ai-content">
@@ -308,7 +366,7 @@
   </div>
 
   <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min" id="line_sticker">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="line_sticker">
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
       <img src="images/line_sticker_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="AI-Bo & Warm-Sheep (LINE Sticker)<br>https://store.line.me/stickershop/product/11284238/en?from=sticker">
       <div class="w3-container w3-white ai-content">
@@ -339,7 +397,7 @@
   </div>
 
   <!-- Sixth Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min" id="web">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="web">
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
       <img src="images/person_04.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="2009 Global Industrial Forum<br>https://id.cyut.edu.tw">
       <div class="w3-container w3-white ai-content">
@@ -370,7 +428,7 @@
   </div>
 
   <!-- Seventh Photo Grid-->
-  <div class="w3-row-padding w3-row w3-grayscale-min" id="award">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="award">
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
       <img src="images/award_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Global Chinese Hanfu Design - Finalist<br>https://www.ntdtv.com.tw/b5/20101026/video/76306.html">
       <div class="w3-container w3-white ai-content">
@@ -438,7 +496,7 @@
 
   <div class="w3-container w3-padding-large">  
 
-    <h4><b>RESEARCH</b></h4>
+    <h4><b>Research</b></h4>
     <h6 class="thesis_title" >1. 
       <a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/ccd=yuQKa0/record?r1=1&h1=1">
         Applying the E-Commerce Systems Success Model to Study Customers' Intention to Use PX Pay
@@ -455,32 +513,9 @@
     <hr style="border:1px dotted #bbbbbb;">
   </div>
 
-  <!-- Images of Me -->
-  <div class="w3-row-padding" id="about">
-    <div class="w3-col m6">
-      <img src="images/aiRong1.jpg" alt="Me" style="width:100%">
-    </div>
-    <div class="w3-col m6">
-      <img src="images/aiRong2.jpg" alt="Me" style="width:100%">
-    </div>
-  </div>
-
   <div class="w3-container w3-padding-large ai-container" style="margin-bottom:32px">
-    <h4><b>About Me</b></h4>
-    <div>
-      <h6>I am Alivio (Ai Rong Li).</h6>
-      <p class="job_title">Senior UI/UX Designer</p>
-      <p>Multiple projects UX designer & Front-End Engineer from TWN currently based in Tainan city. I am a UX design professional with over 8 years of experience in interaction design & development, service design, design research, project management, customer focus, and technical training. I work closely with other colleagues involved in projects, such as create and implement the design.
-      <br/><br/>
-      1. Understand market competition, customer needs, contributing to the definition of new product technical characteristics to create new products.
-      <br/>
-      2. New product development process from project specification to product launch.
-      </p>
-    </div>
 
     <!--Skills -->
-    <hr style="border:1px dotted #bbbbbb;">
-
     <h4><b>Technical Skills</b></h4>
     <!-- Progress bars / Skills -->
     <p>UI/UX Design</p>
