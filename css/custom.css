@@ -112,7 +112,7 @@ body,h1,h2,h3,h4,h5,h6 {
   margin: 10px 0 0 0;
 }
 .w3-container h6 {
-  color: #1E4373;
+  color: #59585a;
 }
 .w3-container p {
   display: block;
@@ -285,6 +285,17 @@ hr {
   border-radius: 50%;
 }
 /* Thesis style */
+.thesis-subtitle {
+  color: #3371A5;
+  margin: 0 0 0 19px;
+  font-size: 15px;
+}
+.thesis-subtitle-keyword {
+  color: rgb(87 87 91 / 86%);
+  margin: 16px 0 0 19px;
+  font-size: 15px;
+  font-style: italic;
+}
 .gitHubIcon {
   margin-left: 5px;
 }
@@ -294,13 +305,15 @@ hr {
 }
 .thesis_keyword {
   color: #3371A5;
+  margin: 0 0 0 19px;
+  font-size: 15px;
 }
 .thesis_img {
   border: 1px solid #d3dce4;
 }
 .thesis_content {
   border: 1px solid #c6d1db;
-  padding: 8px 8px;
+  padding: 18px 18px;
   color: rgb(87 87 91 / 86%);
   height: 288px;
   overflow: scroll;
@@ -432,10 +445,20 @@ hr {
     color: #1e4373;
   }
   .thesis_keyword {
-    margin-left: 0px!important;
+    color: #858d97;
+    margin: 0 0 0 0px;
+    font-size: 16px;
   }
   .research-image {
     margin-bottom: 10px;
+  }
+  .thesis-subtitle {
+    margin: 8px 0 8px 0px;
+    font-size: 16px;
+  }
+  .thesis-subtitle-keyword {
+    margin: 0 0 0 0px;
+    font-size: 16px;
   }
   .fancybox-close {
     top: 6%;
