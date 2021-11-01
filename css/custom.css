@@ -131,10 +131,10 @@ body,h1,h2,h3,h4,h5,h6 {
 .ai-dark-blue {
   color: #6c9eb5;
   background-color: #3371a5;
-  background: -webkit-linear-gradient(0.41turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #abf4ffa6);
-  background: -o-linear-gradient(0.41turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #abf4ffa6);
-  background: -moz-linear-gradient(0.41turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #abf4ffa6);
-  background: linear-gradient(0.41turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #abf4ffa6);
+  background: -webkit-linear-gradient(0.46turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #c3e9ffa6);
+  background: -o-linear-gradient(0.46turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #c3e9ffa6);
+  background: -moz-linear-gradient(0.46turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #c3e9ffa6);
+  background: linear-gradient(0.46turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #c3e9ffa6);
   text-align: right!important;
 }
 .skill-padding {
