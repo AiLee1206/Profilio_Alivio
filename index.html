@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
-<title>Ai Rong Li - Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ai-Rong Lee - Portfolio</title>
+  <meta name="description" content="Ai-Rong Lee (Alivio) - UI/UX Designer & Front-End Engineer. Solar & smart-energy monitoring UX, design systems, real-time data visualization, and hands-on front-end work (React / Vue / TypeScript).">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ai-Rong Lee - UI/UX Designer & Front-End Engineer">
+  <meta property="og:description" content="Portfolio: solar & smart-energy monitoring UX, design systems, real-time data visualization, and front-end engineering.">
+  <meta property="og:url" content="https://ailee1206.github.io/Profilio_Alivio/">
+  <meta property="og:image" content="https://ailee1206.github.io/Profilio_Alivio/images/aiRongPhoto.jpg">
+  <meta name="twitter:card" content="summary">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="css/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/slick-theme.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEMW6XS774"></script>
   <script>
@@ -20,44 +24,23 @@
 
     gtag('config', 'G-PEMW6XS774');
   </script> 
+  <style>
+    body{
+      background-color:skyblue;
+    }
+  </style>
 </head>
-
-<style>
-  body{
-    background-color:skyblue;
-  }
-  . {
-    width: 90%;
-    height: 400px;
-    margin: 0 auto;
-    padding: 0 6px;
-    color: blue;
-  }
-  .container img {
-    overflow: hidden;
-    height: 400px;
-    border-left: 2px dotted #d9e9f7;
-    box-shadow: 2px 0px 5px #1e437370;
-  }
-</style>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left ai-margin" style="z-index:3; width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left ai-margin" style="z-index:3; width:300px;" id="mySidebar">
   <div class="w3-container slider-close aiLogo-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
+    <a href="#" onclick="w3_close();return false;" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="images/ai_logo.png" class="aiLogo">
-    <a href="https://ailee1206.github.io/Profilio_Alivio"><img src="images/ai_personal.png" class="w3-round ai-round"></a>
-    <a href="https://drive.google.com/file/d/12FD6HkIaHUpn1fh4pGD73G7MdTpmnLLM/view?usp=sharing" target="_blank"><span class="pdf">PDF</span></a>
-    <br>
-    <h3 class="myName">
-      <b>Ai Rong Li</b>
-      <a class="gitHubIcon" href="https://github.com/AiLee1206" target="_blank"><i class="fa fa-github w3-hover-github"></i></a>
-    </h3>
-    <h4 class="job_title">Senior Software Engineer</h4>
+    <a href="https://ailee1206.github.io/Profilio_Alivio"><img src="images/ai_logo.png" class="aiLogo aiLogo-solo" alt="ARL logo"></a>
+    <a href="https://drive.google.com/file/d/12FD6HkIaHUpn1fh4pGD73G7MdTpmnLLM/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="has-tip pdf-corner" data-tip="Portfolio Book (PDF)"><i class="fa fa-book"></i></a>
   </div>
   <hr>
 
@@ -65,13 +48,18 @@
 <!--     <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
       <i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO <span class="quantity">(27)</span>
     </a> -->
-    <a href="#about" class="w3-bar-item w3-button w3-padding">
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
       <i class="fa fa-user fa-fw w3-margin-right"></i>About Me
     </a> 
     <ul>
       <li>
-        <span id="careers" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-briefcase w3-margin-right"></i>My Careers</span>
+        <span id="careers" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-briefcase w3-margin-right"></i>Work Experience</span>
         <ul class="careers_li">
+          <li>
+            <a href="#delta_energy" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
+              <i class="fa fa-fw w3-margin-right"></i>DELTA &middot; Energy (2022 - Present)
+            </a>
+          </li>
           <li>
             <a href="#delta_01" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
               <i class="fa fa-fw w3-margin-right"></i>DELTA (2016 - 2021) <!-- <span class="quantity">(3)</span> -->
@@ -86,21 +74,21 @@
         </ul>
       </li>
       <li>
-        <span id="personalJobs" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-user-md w3-margin-right"></i>Personal Jobs</span> 
+        <span id="personalJobs" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-user-md w3-margin-right"></i>Personal Projects</span> 
         <ul class="cpersonalJobs_li">
           <li>
             <a href="#sideProject" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
-              <i class="fa fa-fw w3-margin-right"></i>Side Projects (2020 - 2021)</span>
+              <i class="fa fa-fw w3-margin-right"></i>Side Projects (2026)
             </a>
           </li>
           <li>
             <a href="#line_sticker" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
-              <i class="fa fa-fw w3-margin-right"></i>LINE Sticker (2016 - 2021) <!-- <span class="quantity">(3) --></span>
+              <i class="fa fa-fw w3-margin-right"></i>LINE Sticker (2016 - 2021) <!-- <span class="quantity">(3)</span> -->
             </a>
           </li>
           <li>
             <a href="#web" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
-              <i class="fa fa-fw w3-margin-right"></i>Web Design (2009 - 2020) <!-- <span class="quantity">(3) --></span>
+              <i class="fa fa-fw w3-margin-right"></i>Web Design (2009 - 2020) <!-- <span class="quantity">(3)</span> -->
             </a>
           </li>
         </ul>
@@ -110,23 +98,23 @@
     <a href="#award" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-fw fa-trophy w3-margin-right"></i>Awards (2009 - 2010) <!-- <span class="quantity">(3)</span> --></a>
     <!-- No.8 child -->
     <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
-      <i class="fa fa-th-large fa-university w3-margin-right"></i>Thesis (2010 - 2020) <!-- <span class="quantity">(1)</span> -->
+      <i class="fa fa-th-large fa-university w3-margin-right"></i>Thesis (2020) <!-- <span class="quantity">(1)</span> -->
     </a> 
 <!--     <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
       <i class="fa fa-fw w3-margin-right"></i>- E-commerce Model (2020) <span class="quantity">(1)</span>
     </a> -->
 
-    <!-- No.10 child -->
     <hr>
-    <div class="w3-bar-item w3-padding"><i class="fa fa-home fa-fw w3-margin-right"></i>Taipei, TW</div>
-    <div class="w3-bar-item w3-padding"><i class="fa fa-phone fa-fw w3-margin-right"></i>+886-953-071-276</div> 
-    <a href="mailto:sharon1206_6@hotmail.com" target="_blank"><div class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw w3-margin-right"></i>sharon1206_6@hotmail.com</div></a>
+    <div class="w3-bar-item w3-padding"><i class="fa fa-home fa-fw w3-margin-right"></i>Tainan, TW</div>
+    <div class="w3-bar-item w3-padding"><i class="fa fa-phone fa-fw w3-margin-right"></i>+886-953-071-276</div>
+    <a href="mailto:aissali1206@gmail.com" target="_blank" rel="noopener noreferrer"><div class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw w3-margin-right"></i>aissali1206@gmail.com</div></a>
   </div>
   <hr>
   <div class="w3-panel w3-large ai-community">
-    <a href="https://www.facebook.com/aissa.li.5/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="https://www.instagram.com/ato1206/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/ai-rong-lee-081463119/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://www.facebook.com/aissa.li.5/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/ato1206/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/ai-rong-lee-081463119/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://github.com/ailee1206" target="_blank" rel="noopener noreferrer"><i class="fa fa-github w3-hover-opacity"></i></a>
   </div>
 </nav>
 
@@ -138,10 +126,10 @@
 
   <!-- Header -->
   <header id="portfolio">
-    <a href="https://ailee1206.github.io/Profilio_Alivio"><img src="images/ai_personal.png" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity aiPhoto-mobile"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <a href="https://ailee1206.github.io/Profilio_Alivio" class="has-tip w3-hide-large" data-tip="Back to home"><img src="images/ai_personal.png" class="w3-circle aiPhoto-mobile" alt="Ai-Rong Lee"></a>
 <!--     <div class="w3-container">
-      <h2>AI RONG - Portfolio <span class="font-small">(2009 - 2021)</span></h2>
+      <h2>AI RONG - Portfolio <span class="font-small">(2009 - Present)</span></h2>
       <div id="myJobs"class="w3-section w3-bottombar w3-padding-16">
         <span class="w3-margin-right">Company:</span>
         <a href="#delta_01"><button class="w3-button w3-blue"><i class="fa fa-plug w3-margin-right"></i>Delta</button></a>
@@ -151,28 +139,30 @@
     </div> -->
   </header>
 
-  <!-- Images of Me -->
-  <div class="w3-container ai-container ai-about">
-    <div class="w3-row-padding" id="about">
-      <h4 class="about-subtitle">About Me</h4>
-      <h2 class="about-title">Ai Portfolio <span class="font-small">(2009 - 2021)</span></h2>
-      <div class="w3-col m6">
-        <div>
-          <p>I am Ai Rong Li (Alivio), Multiple projects UX designer & Front-End Engineer from TWN currently based in Tainan city. I am a UX design professional with over 8 years of experience in interaction design & development, service design, design research, project management, customer focus, and technical training. I work closely with other colleagues involved in projects, such as create and implement the design.
-          <br/><br/>
-          1. Understand market competition, customer needs, contributing to the definition of new product technical characteristics to create new products.
-          <br/>
-          2. New product development process from project specification to product launch.
-          </p>
+  <!-- Hero + About merged: the single identity section -->
+  <div class="ai-hero" id="about">
+    <!-- Motifs from her portfolio book cover: hanging dot-lines + year spine -->
+    <svg class="ai-hero-deco ai-deco-right" width="220" height="160" viewBox="0 0 220 160" aria-hidden="true">
+      <g stroke="#1e4373" stroke-width="1.2" fill="none" opacity="0.32">
+        <line x1="30" y1="0" x2="30" y2="84"/><circle cx="30" cy="90" r="5"/>
+        <line x1="110" y1="0" x2="110" y2="38"/><circle cx="110" cy="44" r="5" fill="#1e4373"/>
+        <line x1="190" y1="0" x2="190" y2="128"/><circle cx="190" cy="134" r="5"/>
+      </g>
+    </svg>
+    <div class="ai-hero-flex">
+      <div class="ai-hero-text">
+        <p class="ai-hero-eyebrow">UI/UX Designer &amp; Front-End Engineer</p>
+        <h1 class="ai-hero-title">Ai-Rong Lee <span>(Alivio)</span></h1>
+        <p class="ai-hero-sub">Over a decade of turning complex energy &amp; system data into clear, usable interfaces &mdash; shipping both the UX (Figma, Design System) and the front-end (React / Vue / TypeScript).</p>
+        <p class="ai-hero-story">Currently at Delta, I design the experience for solar &amp; smart-energy monitoring products &mdash; from Figma UX flows, design systems, and real-time data visualization to hands-on front-end implementation &mdash; working closely with firmware, cloud, and PM teams to bridge design and engineering.</p>
+        <div class="ai-hero-cta">
+          <a href="#delta_energy" class="ai-btn ai-btn-primary">View Work</a>
+          <a href="https://drive.google.com/file/d/1i0omIpKoHxU2M_9iZXyLx7t6XwxCFpPL/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="ai-btn ai-btn-ghost"><i class="fa fa-download btn-margin-right"></i>Download Resume</a>
         </div>
-        <a href="https://drive.google.com/file/d/1i0omIpKoHxU2M_9iZXyLx7t6XwxCFpPL/view?usp=sharing" target="_blank">
-          <button class="w3-margin-bottom w3-round downloadBtn">
-            <i class="fa fa-download btn-margin-right"></i>Download Resume
-          </button>
-        </a>
       </div>
-      <div class="w3-col m5 ai-about-image">
-        <img src="images/aiRong1.jpg" alt="Me" style="width:100%">
+      <div class="ai-hero-photo">
+        <!-- Desktop only: circular headshot (mobile identity = header corner avatar) -->
+        <img src="images/aiRongPhoto.jpg" class="ai-photo-circle" alt="Ai-Rong Lee">
       </div>
     </div>
   </div>
@@ -184,34 +174,105 @@
       <div class="w3-col m5">
         <div>
           <!-- Progress bars / Skills -->
-          <p>UI/ UX Design: flow charts, wireframes, figma</p>
+          <p>UI/UX Design &mdash; Figma, Design System, User Flow, Wireframe<span class="skill-pct">95%</span></p>
           <div class="skill-grey skill-white w3-round">
-            <div class="w3-container w3-center ai-dark-blue skill-padding w3-round" style="width:95%">95%</div>
+            <div class="ai-dark-blue skill-padding w3-round" style="width:95%"></div>
           </div>
-          <p>HTML, CSS, XML, OID</p>
+          <p>HTML5, CSS3, RWD<span class="skill-pct">98%</span></p>
           <div class="skill-grey skill-white w3-round">
-            <div class="w3-container w3-center ai-dark-blue skill-padding w3-round" style="width:98%">98%</div>
+            <div class="ai-dark-blue skill-padding w3-round" style="width:98%"></div>
           </div>
-          <p>JavaScript</p>
+          <p>JavaScript (ES6), TypeScript<span class="skill-pct">88%</span></p>
           <div class="skill-grey skill-white w3-round">
-            <div class="w3-container w3-center ai-dark-blue skill-padding w3-round" style="width:88%">88%</div>
+            <div class="ai-dark-blue skill-padding w3-round" style="width:88%"></div>
+          </div>
+          <p>React, Vue<span class="skill-pct">80%</span></p>
+          <div class="skill-grey skill-white w3-round">
+            <div class="ai-dark-blue skill-padding w3-round" style="width:80%"></div>
           </div>
         </div>
       </div>
       <div class="w3-col m5">
-        <p>Photoshop</p>
+        <p>Data Visualization &mdash; ECharts, Syncfusion<span class="skill-pct">85%</span></p>
         <div class="skill-grey skill-white w3-round">
-          <div class="w3-container w3-center ai-dark-blue skill-padding w3-round" style="width:96%">96%</div>
+          <div class="ai-dark-blue skill-padding w3-round" style="width:85%"></div>
         </div>
-        <p>Illustrator</p>
+        <p>Git, Scrum, RESTful API<span class="skill-pct">85%</span></p>
         <div class="skill-grey skill-white w3-round">
-          <div class="w3-container w3-center ai-dark-blue skill-padding w3-round" style="width:98%">98%</div>
+          <div class="ai-dark-blue skill-padding w3-round" style="width:85%"></div>
         </div>
-        <p>Photography</p>
+        <p>Photoshop, Illustrator<span class="skill-pct">96%</span></p>
         <div class="skill-grey skill-white w3-round">
-          <div class="w3-container w3-center ai-dark-blue skill-padding w3-round" style="width:90%">90%</div>
+          <div class="ai-dark-blue skill-padding w3-round" style="width:96%"></div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Delta Energy (Current) Photo Grid-->
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="delta_energy">
+    <div class="w3-row-padding">
+      <div class="w3-col">
+        <h2>DELTA Electronics <span class="font-small">- Senior UI/UX Designer, Solar &amp; Smart Energy (2022 - Present)</span></h2>
+      </div>
+    </div>
+    <div class="carousel-wrap">
+    <div class="card-carousel">
+    <div class="w3-third w3-container w3-margin-bottom ai-link frame">
+      <img src="images/delta_energy_01.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" style="cursor:pointer" onclick="openGallery('ul',0)" alt="Energy Monitoring App (Delta)">
+      <div class="w3-container w3-white ai-content">
+        <a href="#" onclick="openGallery('ul',0);return false;">
+          <h6 class="font-bold">Energy Monitoring App (Delta)</h6>
+        </a>
+        <p>UI design and market research for a US-market energy monitoring app. Praised at an energy expo for its clear interface and smooth operation.
+        <br><span class="gallery-hint" onclick="openGallery('ul',0)">&#9654; Walk through the app &middot; 5 screens</span></p>
+        <div class="tech-tags">
+          <span class="tech-tag">Figma</span><span class="tech-tag">UX Flow</span><span class="tech-tag">UI Spec</span><span class="tech-tag">Market Research</span>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom ai-link">
+      <img src="images/delta_energy_02.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" style="cursor:pointer" onclick="openGallery('m2j',0)" alt="M2J Solar Tablet - UX Flow (Delta)">
+      <div class="w3-container w3-white ai-content">
+        <a href="#" onclick="openGallery('m2j',0);return false;">
+          <h6 class="font-bold">M2J Solar Tablet &mdash; UX Flow (Delta)</h6>
+        </a>
+        <p>Led the UX flow in Figma: from Data Collector commissioning &amp; initialization to live monitoring and data visualization.
+        <br><span class="gallery-hint" onclick="openGallery('m2j',0)">&#9654; Walk through the flow &middot; 7 screens</span></p>
+        <div class="tech-tags">
+          <span class="tech-tag">Figma</span><span class="tech-tag">UX Flow</span><span class="tech-tag">Design System</span><span class="tech-tag">Syncfusion Charts</span>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-container ai-link">
+      <img src="images/delta_energy_03.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" style="cursor:pointer" onclick="openGallery('ai',0)" alt="AI Wiring-Anomaly Detection (Delta)">
+      <div class="w3-container w3-white ai-content">
+        <a href="#" onclick="openGallery('ai',0);return false;">
+          <h6 class="font-bold">AI Wiring-Anomaly Detection (Delta)</h6>
+        </a>
+        <p>Designed the UI that presents AI detection results &mdash; flagging installation anomalies (cable bends, thermal faults) on photos, with clear next-step guidance.
+        <br><span class="gallery-hint" onclick="openGallery('ai',0)">&#9654; Walk through the AI detection &middot; 6 screens</span></p>
+        <div class="tech-tags">
+          <span class="tech-tag">Figma</span><span class="tech-tag">AI / UX</span><span class="tech-tag">Vertex AI</span><span class="tech-tag">Wireframes</span>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom ai-link frame">
+      <img src="images/jet_1_dashboard.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" style="cursor:pointer" onclick="openGallery('jet',0)" alt="Test Automation Software (Delta ATS)">
+      <div class="w3-container w3-white ai-content">
+        <a href="#" onclick="openGallery('jet',0);return false;">
+          <h6 class="font-bold">Test Automation Software (Delta ATS)</h6>
+        </a>
+        <p>Designed and built end-to-end: one-click regulation-test runs with automated sweep sequences, live pass / fail logging, and instrument control. (Sensitive data masked)
+        <br><span class="gallery-hint" onclick="openGallery('jet',0)">&#9654; Walk through the app &middot; 2 screens</span></p>
+        <div class="tech-tags">
+          <span class="tech-tag">C# / .NET</span><span class="tech-tag">WPF UI</span><span class="tech-tag">SCPI Instruments</span><span class="tech-tag">Modbus</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <span class="car-arrow car-prev" onclick="scrollCarousel(-1)" title="Previous"><i class="fa fa-chevron-left"></i></span>
+    <span class="car-arrow car-next" onclick="scrollCarousel(1)" title="Next"><i class="fa fa-chevron-right"></i></span>
     </div>
   </div>
 
@@ -219,34 +280,34 @@
   <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="delta_01">
     <div class="w3-row-padding">
       <div class="w3-col">
-        <h2>DELTA Electronics<span class="font-small">- Senior Software Engineer / PVI-System Integration (2016 - 2021)</span></h2>
+        <h2>DELTA Electronics <span class="font-small">- Senior Software Engineer / PVI-System Integration (2016 - 2021)</span></h2>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/delta_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="POWER MONITOR (Touch Panel for different user)">
+      <img src="images/delta_01.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Power Monitor (touch panels for different user roles)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://mydeltasolar.deltaww.com/manual/product/power_monitor/ja/UM_S4J_111.pdf" target="_blank">
+        <a href="https://mydeltasolar.deltaww.com/manual/product/power_monitor/ja/UM_S4J_111.pdf" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">Power Monitor: R-Series (Delta)</h6>
         </a>
-        <p>Self-Consumption Solution for remaining capacity, Power Plant Solution for full capacity, and Storage Solution for storage system used (JP market).</p>
+        <p>Self-Consumption Solution for remaining capacity, Power Plant Solution for full capacity, and a Storage Solution for battery storage systems (JP market).</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/delta_02.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Create the Power Plant Application on Cloud">
+      <img src="images/delta_02.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Create the Power Plant Application on Cloud">
       <div class="w3-container w3-white ai-content">
-        <a href="https://mydeltasolar.deltaww.com" target="_blank">
+        <a href="https://mydeltasolar.deltaww.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">Cloud: Power Plant Website (Delta)</h6>
         </a>
-        <p>Remote control to solar energy monitor (multify inverters & data collector). It's easy install, easy monitoring, and easy maintenance on Cloud.</p>
+        <p>Remote monitoring and control of solar energy systems (multiple inverters & data collectors) &mdash; easy installation, monitoring, and maintenance in the cloud.</p>
       </div>
     </div>
     <div class="w3-third w3-container ai-link">
-      <img src="images/delta_03.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="APP: Solar Monitor (Delta)">
+      <img src="images/delta_03.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="App: Solar Monitor (Delta)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://mydeltasolar.deltaww.com" target="_blank">
-          <h6 class="font-bold">APP: Solar Monitor (Delta)</h6>
+        <a href="https://mydeltasolar.deltaww.com" target="_blank" rel="noopener noreferrer">
+          <h6 class="font-bold">App: Solar Monitor (Delta)</h6>
         </a>
-        <p>Remote control to solar energy monitor on APP. Calendar for 25 years query (search for today, month, year, 20 years from inverter data).</p>
+        <p>Remote solar energy monitoring in the app, with a calendar view for querying up to 20 years of inverter data (by day, month, or year).</p>
       </div>
     </div>
   </div>
@@ -259,30 +320,30 @@
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/evga_motherboards.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="EVGA Official Site">
+      <img src="images/evga_motherboards.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="EVGA Official Site">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.evga.com" target="_blank">
+        <a href="https://www.evga.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">EVGA Official Website (EVGA)</h6>
         </a>
-        <p>Create and design the EVGA official website, and promote the NVIDIA bundle. Design all display card pages on Amazon/JD.com.</p>
+        <p>Created and designed the EVGA official website and promoted NVIDIA bundles. Designed all graphics card pages on Amazon/JD.com.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/evga_laptop.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Create EVGA Products Concept<br>https://www.evga.com">
+      <img src="images/evga_laptop.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Create EVGA Products Concept">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.evga.com/articles/00982/evga-sc17-laptop" target="_blank">
-          <h6 class="font-bold">Create Products Concept (EVGA)</h6>
+        <a href="https://www.evga.com/articles/00982/evga-sc17-laptop" target="_blank" rel="noopener noreferrer">
+          <h6 class="font-bold">Product Concept Design (EVGA)</h6>
         </a>
-        <p>Design Admin internal system, Employees' Welfare, and products Photography. Take the products photography for display card, and laptop, etc. And display card page on Amazon/ JD.com</p>
+        <p>Designed the internal admin system and employee-welfare pages, and shot product photography (graphics cards, laptops, etc.). Also designed graphics card pages on Amazon/JD.com.</p>
       </div>
     </div>
     <div class="w3-third w3-container ai-link">
-      <img src="images/evga_nvidia_theDIVISION.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Promote NVIDIA Bundles">
+      <img src="images/evga_nvidia_theDIVISION.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Promote NVIDIA Bundles">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.evga.com/articles/00983/the-division" target="_blank">
+        <a href="https://www.evga.com/articles/00983/the-division" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">Promote NVIDIA Bundles (EVGA)</h6>
         </a>
-        <p>Promote NVIDIA bundles, such as BATMAN. For a limited time, get the epic conclusion to the Rocksteady Batman™: Arkham Trilogy with qualifying purchases of GeForce GTX 980 Ti, 980, 970, or 960 GPU.</p>
+        <p>Promoted NVIDIA bundles such as the Batman&trade;: Arkham Trilogy campaign &mdash; landing pages for qualifying GeForce GTX 980 Ti / 980 / 970 / 960 purchases.</p>
       </div>
     </div>
   </div>
@@ -295,33 +356,33 @@
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/ACTi_11.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="NVR Server for IP, iPad, iPhone, Android, Tablet">
+      <img src="images/ACTi_11.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="NVR Server for IP, iPad, iPhone, Android, Tablet">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
-          <h6 class="font-bold">NVR Server for IP, iPad, iPhone, Android, Tablet (ACTi)</h6>
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
+          <h6 class="font-bold">NVR Server for PC, iPad, iPhone & Android (ACTi)</h6>
         </a>
-        <p>Product : NVR server + Web client + Mobile client
-           User : Administrator / Supervsor / Manager / Security Officer
-           Aim : Manage up to 64 IP cameras or video encoders
-           Structure : Live View, Playback, Setup</p>
+        <p>Product: NVR server + Web client + Mobile client
+           User: Administrator / Supervisor / Manager / Security Officer
+           Aim: Manage up to 64 IP cameras or video encoders
+           Structure: Live View, Playback, Setup</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/ACTi_05.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="APP : Mobile Go (ACTi)<br>https://www.acti.com">
+      <img src="images/ACTi_05.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="App: Mobile Go (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
-          <h6 class="font-bold">APP: Mobile Go (ACTi)</h6>
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
+          <h6 class="font-bold">App: Mobile Go (ACTi)</h6>
         </a>
-        <p>MobileGo use the playback style from NVR3, so user can easily navigate the playback control. Finally, event push notify will be implemented on the mobile.</p>
+        <p>Mobile Go uses the playback style from NVR3, so users can easily navigate playback controls. Event push notifications will also be implemented on mobile.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/sketch.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Mobile Sketch<br>https://www.acti.com">
+      <img src="images/sketch.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Mobile Sketch">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">Mobile Sketch (ACTi)</h6>
         </a>
-        <p>Active Mobie Surveillance camera Client for iPad, iPhone, Android, Tablet.</p>
+        <p>ACTi mobile surveillance camera client for iPad, iPhone, and Android tablets.</p>
       </div>
     </div>
   </div>
@@ -329,30 +390,30 @@
   <!-- Fourth Photo Grid-->
   <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min">
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/ACTi_06.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="APP Prototype: Mobile Go (ACTi)<br>https://www.acti.com">
+      <img src="images/ACTi_06.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="App Prototype: Mobile Go (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
-          <h6 class="font-bold">APP Prototype: Mobile Go (ACTi)</h6>
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
+          <h6 class="font-bold">App Prototype: Mobile Go (ACTi)</h6>
         </a>
-        <p>MobileGo use the playback style from NVR3, so user can easily navigate the playback control. Finally, event push notify will be implemented on the mobile.</p>
+        <p>Mobile Go uses the playback style from NVR3, so users can easily navigate playback controls. Event push notifications will also be implemented on mobile.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/ACTi_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="NVR Server for security (ACTi)">
+      <img src="images/ACTi_01.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="NVR Server for security (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">NVR Server for Security (ACTi)</h6>
         </a>
         <p>Implement NVR system design for IP cameras. Design and implement prototypes (mockups) to validate concepts. Monitor multiple cameras.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/ACTi_10.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="APP : Mobile Go (ACTi)">
+      <img src="images/ACTi_10.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="App: Mobile Go (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">Camera Demo Tools (ACTi)</h6>
         </a>
-        <p>Camera Demo Tool use the playback style from NVR3, so user can easily navigate the playback control. Finally, event push notify will be implemented on the mobile.</p>
+        <p>A demo tool for showcasing ACTi camera features &mdash; sharing the NVR3 playback style so users can navigate controls easily.</p>
       </div>
     </div>
   </div>
@@ -360,30 +421,30 @@
   <!-- Fourth-2 Photo Grid-->
   <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min">
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/acti_infoArch.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="IVS: Intelligent Video Surveillance System (ACTi)">
+      <img src="images/acti_infoArch.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="IVS: Intelligent Video Surveillance System (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">IVS: Intelligent Video Surveillance System (ACTi)</h6>
         </a>
-        <p>IVS can turn boring surveillance video footage into valuable data. Some useful quantitative IVS functions can make immediate business impact such as people and vehicle counting. The application of IVS for business is limitless.</p>
+        <p>IVS turns raw surveillance footage into valuable data. Quantitative functions such as people and vehicle counting deliver immediate business impact.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/ACTi_04.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Algorithm Settings (ACTi)">
+      <img src="images/ACTi_04.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Algorithm Settings (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">IVS: Algorithm Settings (ACTi)</h6>
         </a>
-        <p>Algorithm Settings: When something is lost to trigger a warning voice in a bank, market, etc place.</p>
+        <p>Algorithm Settings: triggers a voice alert when an object goes missing &mdash; for venues such as banks and markets.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/ACTi_08.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Algorithm Settings (ACTi)">
+      <img src="images/ACTi_08.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Algorithm Settings (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">IVS: Algorithm Settings (ACTi)</h6>
         </a>
-        <p>Algorithm Settings with audio playback in a bank, market, etc place.</p>
+        <p>Algorithm Settings with audio playback, for venues such as banks and markets.</p>
       </div>
     </div>
   </div>
@@ -391,30 +452,52 @@
   <!-- Fiveth Photo Grid-->
   <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min">
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/ACTi_09.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Algorithm Settings (ACTi)<br>https://www.acti.com">
+      <img src="images/ACTi_09.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Algorithm Settings (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">IVS: Algorithm Settings (ACTi)</h6>
         </a>
-        <p>See all the Algorithm Settings (ACTi) of function icons on the Algorithm Settings Application.</p>
+        <p>Overview of all function icons in the Algorithm Settings application.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/ACTi_02.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Configurations (ACTi)">
+      <img src="images/ACTi_02.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Configurations (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">Configurations (ACTi)</h6>
         </a>
         <p>Configurations for Intel Core i3 or lower, Intel Core i5 or above, or customization for other computers.</p>
       </div>
     </div>
     <div class="w3-third w3-container ai-link">
-      <img src="images/ACTi_03.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="NVR Administrator Tool (ACTi)">
+      <img src="images/ACTi_03.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="NVR Administrator Tool (ACTi)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
+        <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">NVR Administrator Tools (ACTi)</h6>
         </a>
-        <p>Audio out and Digital out functions, user can fully utilize the camera functionalities.</p>
+        <p>With Audio Out and Digital Out functions, users can fully utilize the camera's capabilities.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side Projects -->
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="sideProject">
+    <div class="w3-row-padding">
+      <div class="w3-col">
+        <h2>Side Projects <span class="font-small">(2026)</span></h2>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom ai-link frame">
+      <img src="images/vue_1_dashboard.png" class="w3-hover-opacity image-size zoomIn" loading="lazy" style="cursor:pointer" onclick="openGallery('vue',0)" alt="SolarWatch - Vue 3 Energy Dashboard">
+      <div class="w3-container w3-white ai-content">
+        <a href="https://ailee1206.github.io/vue-energy-dashboard/" target="_blank" rel="noopener noreferrer">
+          <h6 class="font-bold">SolarWatch &mdash; Vue 3 Energy Dashboard</h6>
+        </a>
+        <p>A real-time solar-monitoring dashboard I designed and built end-to-end: live power curve, utilization gauge, plant list with search, dark / light mode, and unit-tested stores.
+        <br><span class="gallery-hint" onclick="openGallery('vue',0)">&#9654; Walk through the app &middot; 3 screens</span></p>
+        <div class="tech-tags">
+          <span class="tech-tag">Vue 3</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Pinia</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">ECharts</span><span class="tech-tag">Vitest</span>
+        </div>
       </div>
     </div>
   </div>
@@ -423,31 +506,31 @@
   <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min" id="line_sticker">
     <div class="w3-row-padding">
       <div class="w3-col">
-        <h2>Line Sticker: Ai-bo & Warm-sheep Series <span class="font-small">(2016 - 2021)</span></h2>
+        <h2>LINE Sticker: AI-Bo & Warm-Sheep Series <span class="font-small">(2016 - 2021)</span></h2>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/line_sticker_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="AI-Bo & Warm-Sheep (LINE Sticker)<br>https://store.line.me/stickershop/product/11284238/en?from=sticker">
+      <img src="images/line_sticker_01.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="AI-Bo & Warm-Sheep (LINE Sticker)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://store.line.me/stickershop/product/11284238/en?from=sticker" target="_blank">
+        <a href="https://store.line.me/stickershop/product/11284238/en?from=sticker" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">AI-Bo & Warm-Sheep (LINE)</h6>
         </a>
-        <p>AI-Bo & Warm-Sheep present my daily life as an engineer. Work and love traveling the world meeting people have been eye-opening.</p>
+        <p>AI-Bo & Warm-Sheep present my daily life as an engineer. Working, traveling the world, and meeting new people have been eye-opening.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/line_sticker_02.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="AI's Warm Flowers. <br>https://store.line.me/stickershop/product/11654034/en?from=sticker">
+      <img src="images/line_sticker_02.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="AI's Warm Flowers. ">
       <div class="w3-container w3-white ai-content">
-        <a href="https://store.line.me/stickershop/product/11654034/en?from=sticker" target="_blank">
+        <a href="https://store.line.me/stickershop/product/11654034/en?from=sticker" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">AI's Warm Flowers (LINE)</h6>
         </a>
-        <p>Happy mother's day: Warm flowers in your mind, and love poems for real life.</p>
+        <p>Happy Mother's Day: warm flowers in your mind, and love poems for real life.</p>
       </div>
     </div>
     <div class="w3-third w3-container ai-link">
-      <img src="images/line_sticker_03.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="AI-Bo: Be careful, my friends. (LINE Sticker)<br>https://store.line.me/stickershop/product/11448403/en?from=sticker">
+      <img src="images/line_sticker_03.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="AI-Bo: Be careful, my friends. (LINE Sticker)">
       <div class="w3-container w3-white ai-content">
-        <a href="https://store.line.me/stickershop/product/11448403/en?from=sticker" target="_blank">
+        <a href="https://store.line.me/stickershop/product/11448403/en?from=sticker" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">AI-Bo: Be careful, my friends. (LINE)</h6>
         </a>
         <p>Dear friends, be careful. I love you & miss you.</p>
@@ -461,30 +544,28 @@
       <h2>Web Design <span class="font-small">(2009 - 2020)</span></h2>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/person_04.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="2009 Global Industrial Forum<br>https://id.cyut.edu.tw">
+      <img src="images/person_04.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="2009 Global Industrial Forum">
       <div class="w3-container w3-white ai-content">
-        <a href="https://id.cyut.edu.tw" target="_blank">
-          <h6 class="font-bold">Global Industrial Forum</h6>
+        <a href="https://id.cyut.edu.tw" target="_blank" rel="noopener noreferrer">
+          <h6 class="font-bold">Global Industrial Design Forum</h6>
         </a>
-        <p>2009 Global Industrial Design Forum in Chaoyang University of Technology(CYUT).</p>
+        <p>2009 Global Industrial Design Forum at Chaoyang University of Technology (CYUT).</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/person_03.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Ai Rong Li Webiste<br>https://drive.google.com/file/d/1uCNVYOOOYVIi98CNzXmUv0HTHAuI69ZV/view?usp=sharing">
+      <img src="images/person_03.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Ai-Rong Lee Website">
       <div class="w3-container w3-white ai-content">
-        <a href="https://drive.google.com/file/d/1uCNVYOOOYVIi98CNzXmUv0HTHAuI69ZV/view?usp=sharing" target="_blank">
-          <h6 class="font-bold">Ai Rong Li Webiste</h6>
+        <a href="https://drive.google.com/file/d/1uCNVYOOOYVIi98CNzXmUv0HTHAuI69ZV/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <h6 class="font-bold">Ai-Rong Lee Website</h6>
         </a>
-        <p>Introduction by ARL(Ai Rong Li) Website.</p>
+        <p>Personal introduction website by ARL (Ai-Rong Lee).</p>
       </div>
     </div>
     <div class="w3-third w3-container ai-link">
-      <img src="images/person_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="POSTER: MUJI Design">
+      <img src="images/person_01.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="POSTER: MUJI Design">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.acti.com" target="_blank">
-          <h6 class="font-bold">POSTER: MUJI Design</h6>
-        </a>
-        <p>The different season's concept: Spring is filled. Summer is cool. Fall is quiet. Winter is warm.</p>
+        <h6 class="font-bold">POSTER: MUJI Design</h6>
+        <p>Four seasonal concepts: spring is full of life, summer is cool, fall is quiet, winter is warm.</p>
       </div>
     </div>
   </div>
@@ -495,40 +576,52 @@
       <h2>Awards <span class="font-small">(2009 - 2010)</span></h2>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
-      <img src="images/award_01.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="Global Chinese Hanfu Design - Finalist<br>https://www.ntdtv.com.tw/b5/20101026/video/76306.html">
+      <img src="images/award_01.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="Global Chinese Hanfu Design - Finalist">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.ntdtv.com/b5/2010/06/22/a411186.html" target="_blank">
+        <a href="https://www.ntdtv.com/b5/2010/06/22/a411186.html" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">Global Chinese Hanfu Design - Finalist</h6>
         </a>
-        <p>Global Chinese Hanfu Design Competition in New York. The clothes name is Song Mark Han Charm. Totally tang words. 宋文漢韻・透徹的唐語
+        <p>Global Chinese Hanfu Design Competition in New York. The garment, 宋文漢韻・透徹的唐語, draws on classical Tang-dynasty aesthetics.
 </p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
-      <img src="images/award_03.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="再生龙 Eco Dragon of Renew》Finalist in Xue Xue, 2009">
+      <img src="images/award_03.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="《再生龙 Eco Dragon of Renew》 &mdash; Finalist at Xue Xue, 2009">
       <div class="w3-container w3-white ai-content">
-        <a href="http://blog.sina.com.cn/s/blog_aa88f922010173d5.html" target="_blank">
+        <a href="http://blog.sina.com.cn/s/blog_aa88f922010173d5.html" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">Eco Dragon of Renew - Finalist</h6>
         </a>
-        <p>《再生龙 Eco Dragon of Renew》Finalist in Xue Xue, 2009.</p>
+        <p>《再生龙 Eco Dragon of Renew》 &mdash; Finalist at Xue Xue, 2009.</p>
       </div>
     </div>
     <div class="w3-third w3-container ai-link">
-      <img src="images/person_05.jpg" class="w3-hover-opacity image-size zoomIn" onclick="onClick(this)" alt="IASDR Conference during 2009 in Seoul, South Korea.">
+      <img src="images/person_05.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="IASDR Conference 2009 in Seoul, South Korea.">
       <div class="w3-container w3-white ai-content">
-        <a href="https://www.yumpu.com/en/document/view/6776945/international-association-of-societies-of-design-research-iasdr-2009/87" target="_blank">
+        <a href="https://www.yumpu.com/en/document/view/6776945/international-association-of-societies-of-design-research-iasdr-2009/87" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">IASDR Conference & Global Industrial Design</h6>
         </a>
-        <p>IASDR - Finalist: Design Significance and Characteristic of Incense Culture in Modern Times. And Global Industrial Design tranning in CYUT, 2009.</p>
+        <p>IASDR - Finalist: Design Significance and Characteristic of Incense Culture in Modern Times. Also completed the Global Industrial Design training at CYUT, 2009.</p>
       </div>
     </div>
+  </div>
+
+  <!-- UL App step-through gallery -->
+  <div id="ulGallery" class="ul-gallery" onclick="if(event.target===this){closeGallery();}">
+    <span class="ul-gallery-close" onclick="closeGallery()" title="Close"></span>
+    <span class="ul-gallery-arrow ul-gallery-prev" onclick="galleryStep(-1)">&#10094;</span>
+    <div class="ul-gallery-stage">
+      <img id="ulGalleryImg" src="" alt="App screen">
+      <p id="ulGalleryCaption" class="ul-gallery-caption"></p>
+      <p id="ulGalleryCounter" class="ul-gallery-counter"></p>
+    </div>
+    <span class="ul-gallery-arrow ul-gallery-next" onclick="galleryStep(1)">&#10095;</span>
   </div>
 
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black slide-btn" style="padding-top:0" onclick="this.style.display='none'">
     
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
+      <img id="img01" class="w3-image" alt="">
       <p id="caption"></p>
       <span class="fancybox-close"></span>
   <!--     <a href="#" id="prev" class="previous round">&#8249;</a>
@@ -551,16 +644,16 @@
   <!-- thesis -->
   <div class="w3-container w3-padding-large thesis-container">  
     <div class="w3-col">
-      <h2>Thesis <span class="font-small">(2010 - 2020)</span></h2>
+      <h2>Thesis <span class="font-small">(2020)</span></h2>
     </div>
     <h6 class="thesis_title" >1. 
-      <a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/ccd=yuQKa0/record?r1=1&h1=1">
+      <a href="https://hdl.handle.net/11296/f6zcmz" target="_blank" rel="noopener noreferrer">
         Applying the E-Commerce Systems Success Model to Study Customers' Intention to Use PX Pay
       </a>
     </h6>
     <h4 class="thesis-subtitle">National Yunlin University of Science & Technology, Master of Information Technology - 30 Jun 2020</h4>
 
-    <h4 class="thesis-subtitle-keyword">Key word: PX Mart, PX Pay, E-commerce system success model, structural equation model</h4>
+    <h4 class="thesis-subtitle-keyword">Keywords: PX Mart, PX Pay, E-commerce system success model, structural equation model</h4>
     <p class="thesis_content"><b>ABSTRACT</b>: <br>  Technology has changed consumer lifestyles in recent years. The retail channel incorporates the latest technology to provide options for electronic payment, in-store pickup, and home delivery, thus enhancing the customer experience. This thesis investigated PX Pay, the mobile payment platform of the Taiwanese supermarket chain PX Mart, specifically analyzing intention to use PX Pay. Our findings can aid enterprises in formulating a business model for the electronic payment market.<br><br>
 
     In this thesis, we adopted Wang’s (2008) modification of DeLone and McLean’s (1992) information system success model to the context of e-commerce systems and Fan’s (2012) M-S-QUAL measure of mobile service quality. Customers who had used PX Pay in northern, central, and southern Taiwan as well as in Taiwan’s outlying islands constituted the research sample. Participants were recruited through convenience sampling over the Internet. Of the 525 questionnaires returned, 524 were valid and included in the analysis (effective recovery rate: 99.8%). We then used structural equation modeling to analyze the relevance of system quality, information quality, service quality, perceived value, user satisfaction, and behavioral intention. The statistical methods adopted were factor analysis, descriptive statistical analysis, path coefficient analysis, and an independent sample t-test.<br><br>
@@ -569,10 +662,10 @@
 
     <div class="w3-row-padding" id="research">
       <div class="w3-col m6">
-        <img class="w3-third w3-container research-image" src="images/sem_pxpay.jpg" alt="Structural Equation Model, data analysis (SPSS 24.0)" style="width:100%">
+        <img class="w3-third w3-container research-image" loading="lazy" src="images/sem_pxpay.jpg" alt="Structural Equation Model, data analysis (SPSS 24.0)" style="width:100%">
       </div>
       <div class="w3-col m6">
-        <img class="w3-third w3-container research-image" src="images/path_analysis.jpg" alt="Path Coefficient Analysis (AMOS 26.0)" style="width:100%">
+        <img class="w3-third w3-container research-image" loading="lazy" src="images/path_analysis.jpg" alt="Path Coefficient Analysis (AMOS 26.0)" style="width:100%">
       </div>
     </div>   
   </div>
@@ -582,7 +675,7 @@
   </div>
 
   <!-- Footer -->
-  <div class="w3-center footer">Design by &copy;<a href="https://ailee1206.github.io/Profilio_Alivio" title="AiRongResume" target="_blank" class="w3-hover-opacity"> Ai Rong Li, 2021.</a>
+  <div class="w3-center footer">Designed by <a href="https://ailee1206.github.io/Profilio_Alivio" title="Ai-Rong Lee Portfolio" target="_blank" rel="noopener noreferrer" class="w3-hover-opacity">Ai-Rong Lee</a> &copy; 2026
   </div>
 
   <!-- End page content -->

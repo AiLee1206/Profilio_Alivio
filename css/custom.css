@@ -45,6 +45,10 @@ body,h1,h2,h3,h4,h5,h6 {
 .font-small {
   font-size: 16px;
 }
+/* Sidebar nav: glide to sections instead of jumping */
+html {
+  scroll-behavior: smooth;
+}
 .ai-link {
   border-radius: 10px;
   background: #ffffff;
@@ -71,6 +75,10 @@ body,h1,h2,h3,h4,h5,h6 {
 .btn-margin-right {
   margin-right: 6px;
 }
+/* Sidebar: clickable links are brand navy; non-clickable group headers stay grey */
+.ai-slider > a.w3-bar-item {
+  color: #1e4373;
+}
 /* navigation menu */
 .ai-slider a,
 .ai-link a,
@@ -78,9 +86,8 @@ body,h1,h2,h3,h4,h5,h6 {
   text-decoration: none;
 }
 .ai-slider a:hover {
-  color: #fff!important;
-  background-color: #a4b2bd!important;
-  opacity: 0.7;
+  color: #1e4373!important;
+  background-color: #eef4f9!important;
 }
 .ai-content:hover {
   color: #1e4373!important;
@@ -102,6 +109,31 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 .aiLogo-container {
   vertical-align: text-bottom;
+  /* Keep the ARL logo pinned at the top while the sidebar scrolls */
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #fff;
+  padding-top: 14px;
+  padding-bottom: 6px;
+  transition: box-shadow 0.25s ease;
+}
+/* Shadow appears only once the nav actually scrolls beneath the logo.
+   Mobile drawer (whole sidebar scrolls): shadow hangs off the sticky logo box. */
+.aiLogo-container.logo-shadow {
+  box-shadow: 0 8px 14px -10px rgba(30, 67, 115, 0.16);
+}
+/* Desktop (3-tier layout): the divider hugs the scroll area, and the grey
+   gradient is an inset shadow that starts exactly at the dashed line. */
+#mySidebar hr {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+#mySidebar > hr:first-of-type {
+  margin-bottom: 0;
+}
+.ai-slider.top-shadow {
+  box-shadow: inset 0 12px 12px -12px rgba(30, 67, 115, 0.28);
 }
 .myName {
   color: #474648e6!important;
@@ -129,16 +161,32 @@ body,h1,h2,h3,h4,h5,h6 {
   border-top: 1px dashed #d8e0e5;
 }
 .ai-dark-blue {
-  color: #6c9eb5;
-  background-color: #3371a5;
-  background: -webkit-linear-gradient(0.46turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #c3e9ffa6);
-  background: -o-linear-gradient(0.46turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #c3e9ffa6);
-  background: -moz-linear-gradient(0.46turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #c3e9ffa6);
-  background: linear-gradient(0.46turn,#b4c2cdd9, #7cceffa6, #9edbffa6, #c3e9ffa6);
+  color: #fff;
+  font-weight: 600;
+  /* Energy flow: navy -> Delta Blue, with a whisper of Delta Aqua (#64D7D7) at the tip */
+  background: linear-gradient(90deg, #3371a5, #0087DC 88%, #64D7D7 100%);
   text-align: right!important;
+  position: relative;
 }
+
 .skill-padding {
-  padding: 1px 10px;
+  padding: 0;
+}
+/* Thin refined bars: number lives on the label row, right-aligned */
+.skill-pct {
+  float: right;
+  color: #0087DC; /* Delta Blue - echoes the bar tail & buttons */
+  font-weight: 600;
+  font-size: 13px;
+}
+.ai-skills .skill-white {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.ai-skills .ai-dark-blue {
+  height: 10px;
+  border-radius: 999px;
 }
 .skill-grey {
   color: #fff;
@@ -159,6 +207,461 @@ body,h1,h2,h3,h4,h5,h6 {
 .image-size {
   width: 100%;
 }
+/* Current-role energy cards: keep the 3 mixed portrait/landscape shots the same height.
+   center 30% = show the upper-middle of portrait phone shots (main content, not the status bar) */
+#delta_energy .image-size {
+  height: 240px;
+  object-fit: cover;
+  object-position: center 30%;
+}
+@media (max-width: 600px) {
+  #delta_energy .image-size {
+    height: 320px;
+  }
+}
+
+/* Show project screenshots in full colour (was desaturated until hover) */
+.w3-grayscale-min {
+  filter: none !important;
+}
+
+/* Mobile header: hamburger top-left; the avatar hangs at the top-right,
+   overlapping the hero below (her original layout) */
+header#portfolio {
+  position: relative;
+}
+header#portfolio .has-tip {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  z-index: 5;
+}
+/* Hero */
+.ai-hero {
+  padding: 56px 5% 44px;
+  /* Her original section-gradient language (same family as .ai-about / .ai-skills) */
+  background: linear-gradient(0.56turn, #c6d1db, #f0f9ff, #f1f1f1);
+  border-bottom: 1px dashed #e1e5e7;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+/* Portfolio-book motif: hanging dot-lines (sit behind the text) */
+.ai-hero-deco {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.ai-deco-right {
+  right: 4%;
+}
+.ai-hero-eyebrow {
+  color: #3371a5; /* mid-blue label: kin to the navy name, distinct from body text */
+  font-weight: 600;
+  letter-spacing: 0.14em; /* wider tracking = engraved-label elegance */
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+/* Breathing room above each company / section heading */
+.w3-grayscale-min h2,
+.thesis-container h2 {
+  margin-top: 26px;
+}
+.ai-hero-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(30, 67, 115, 0.18);
+  margin-bottom: 16px;
+}
+.aiLogo-solo {
+  display: block;
+  width: 52%;
+  margin: 10px auto 4px;
+}
+.ai-hero-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1e4373; /* her ARL brand navy - the name wears the brand */
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+.ai-hero-title span {
+  color: #97a1ad;
+  font-weight: 400;
+  font-size: 0.6em; /* one clear step below the name: ~26px desktop, ~16px mobile */
+}
+.ai-hero-sub {
+  max-width: 660px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #5b6570;
+  margin: 0 0 26px;
+}
+.ai-hero-flex {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.ai-hero-text {
+  flex: 1 1 58%;
+  min-width: 0;
+}
+.ai-hero-photo {
+  flex: 0 1 280px;
+  display: flex;
+  justify-content: center;
+}
+/* Desktop: circular headshot */
+.ai-photo-circle {
+  width: min(260px, 100%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  /* Soft white glow beneath, over the deeper navy shadow */
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.85), 0 16px 38px rgba(30, 67, 115, 0.15);
+}
+.ai-hero-story {
+  max-width: 640px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5b6570;
+  margin: 0 0 24px;
+}
+.ai-hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+/* Keyboard navigation: visible focus ring */
+a:focus-visible,
+button:focus-visible,
+.ai-btn:focus-visible {
+  outline: 2px solid #0087DC;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.ai-btn {
+  display: inline-block;
+  padding: 9px 26px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+.ai-btn-primary {
+  /* Glass pill: translucent Delta Blue + frosted blur + top light reflection */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.08) 46%, rgba(255, 255, 255, 0) 52%), rgba(0, 135, 220, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 3px 10px rgba(0, 135, 220, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+.ai-btn-primary:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.12) 46%, rgba(255, 255, 255, 0) 52%), rgba(0, 148, 240, 0.88);
+  box-shadow: 0 4px 12px rgba(0, 135, 220, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.ai-btn-primary:active {
+  box-shadow: 0 2px 7px rgba(0, 135, 220, 0.20);
+}
+.ai-btn-ghost {
+  /* Frosted white glass */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #1e4373;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(30, 67, 115, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+.ai-btn-ghost:hover {
+  background: #fff;
+  color: #0087DC;
+  border-color: #0087DC;
+  box-shadow: 0 4px 10px rgba(30, 67, 115, 0.11);
+}
+@media (max-width: 992px) {
+  /* Mobile: text-only intro (identity = header corner avatar),
+     with fixed symmetric side padding like the original layout */
+  .ai-hero {
+    padding: 36px 24px 28px;
+  }
+  .ai-skills {
+    padding: 12px 24px 24px;
+  }
+  .ai-hero-title {
+    font-size: 36px; /* mid-step between 44px desktop and 27px phones */
+  }
+  .ai-hero-photo,
+  .ai-hero-deco {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .ai-hero {
+    padding: 40px 6% 28px;
+  }
+  .ai-hero-title {
+    font-size: 27px;
+  }
+  .ai-hero-title br {
+    display: none;
+  }
+  .ai-hero-sub {
+    font-size: 15px;
+  }
+}
+
+/* Elegant thin sidebar scrollbar */
+#mySidebar,
+.ai-slider {
+  scrollbar-width: thin;
+  scrollbar-color: #c4cfda transparent;
+}
+#mySidebar::-webkit-scrollbar,
+.ai-slider::-webkit-scrollbar {
+  width: 6px;
+}
+#mySidebar::-webkit-scrollbar-track,
+.ai-slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+#mySidebar::-webkit-scrollbar-thumb,
+.ai-slider::-webkit-scrollbar-thumb {
+  background: #c4cfda;
+  border-radius: 3px;
+}
+#mySidebar::-webkit-scrollbar-thumb:hover,
+.ai-slider::-webkit-scrollbar-thumb:hover {
+  background: #a7b4c2;
+}
+
+/* Desktop: logo fixed on top, only the nav (below the divider) scrolls,
+   social row stays pinned at the bottom — scrollbar spans the nav only */
+@media (min-width: 993px) {
+  #mySidebar {
+    display: flex !important;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .ai-slider {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0;
+    padding-top: 8px;
+  }
+}
+
+/* Technical Skills: symmetric two-column layout with a clear gutter */
+@media (min-width: 601px) {
+  .ai-skills .w3-col.m5 {
+    width: 46%;
+  }
+  .ai-skills .w3-col.m5 + .w3-col.m5 {
+    margin-left: 8%;
+  }
+}
+/* Skill bars: smooth reveal (width animated from 0 by JS on scroll-in) */
+.ai-skills .ai-dark-blue {
+  transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* UL App step-through gallery (lightbox) */
+.ul-gallery {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 23, 35, 0.93);
+  align-items: center;
+  justify-content: center;
+}
+.ul-gallery-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+}
+.ul-gallery-stage img {
+  max-height: 80vh;
+  max-width: 90vw;
+  border-radius: 20px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+.ul-gallery-caption {
+  color: #e6ebf1;
+  font-size: 15px;
+  margin: 0;
+  max-width: 560px;
+  text-align: center;
+}
+.ul-gallery-counter {
+  color: #9fb0c3;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+.ul-gallery-close {
+  /* Her signature circular X (same sprite as the image modal) */
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  background-image: url(../images/fancybox_sprite.png);
+  cursor: pointer;
+  z-index: 31;
+  transition: opacity 0.15s ease;
+}
+.ul-gallery-close:hover {
+  opacity: 0.8;
+}
+.ul-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #cbd5e1;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+.ul-gallery-arrow:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+.ul-gallery-prev {
+  left: 14px;
+}
+.ul-gallery-next {
+  right: 14px;
+}
+.gallery-hint {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #3371a5;
+  cursor: pointer;
+}
+/* Portfolio Book: refined round icon beside the ARL logo */
+a.pdf-corner {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef4f9;
+  color: #1e4373;
+  border: 1px solid #dbe7f0;
+  font-size: 14px;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+a.pdf-corner:hover {
+  background: #0087DC;
+  color: #fff;
+  border-color: #0087DC;
+}
+/* Corner tooltip: right-aligned so it stays inside the sidebar */
+a.pdf-corner::after {
+  left: auto;
+  right: 0;
+  transform: translateY(4px);
+}
+a.pdf-corner:hover::after {
+  transform: translateY(9px);
+}
+
+
+/* Elegant tooltip (add class="has-tip" + data-tip="...") */
+.has-tip {
+  position: relative;
+  display: inline-block;
+}
+.has-tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%) translateY(4px);
+  /* Frosted-white tooltip: navy text, hairline blue border - matches the glass language */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #1e4373;
+  border: 1px solid #c8ddef;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 5px 11px;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(30, 67, 115, 0.14);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 30;
+}
+.has-tip::before {
+  content: none;
+}
+.has-tip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(9px);
+}
+
+
+/* Per-project tech tags: evidence of the stack used on each card */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 0 14px;
+}
+.tech-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: #3371a5;
+  background: #eef4f9;
+  border: 1px solid #dbe7f0;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.gallery-hint:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .ul-gallery-arrow {
+    font-size: 24px;
+    width: 42px;
+    height: 42px;
+  }
+  .ul-gallery-prev {
+    left: 4px;
+  }
+  .ul-gallery-next {
+    right: 4px;
+  }
+}
 .font-bold {
   font-weight: bold;
 }
@@ -176,8 +679,7 @@ body,h1,h2,h3,h4,h5,h6 {
     overflow: hidden;
   }
   .zoomIn:hover {
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    -moz-transition: scale(1.1); /* moZ */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */ /* moZ */
     -ms-transform: scale(1.1); /* IE 9 */
     transform: scale(1.1);
   }
@@ -218,9 +720,8 @@ body,h1,h2,h3,h4,h5,h6 {
   border-bottom: none;
 }
 .slider-close a:hover {
-  color: #fff;
-  background-color: #a4b2bd;
-  opacity: 0.7;
+  color: #1e4373;
+  background-color: #eef4f9;
   border-radius: 50%;
 }
 
@@ -229,7 +730,7 @@ body,h1,h2,h3,h4,h5,h6 {
   width:50%;
 }
 .footer {
-  background-color: #d5d5d5;
+  background-color: #eef2f6;
   border-top: 1px solid #d8e0e5;
   padding: 10px 0 12px;
   margin-top: 20px;
@@ -335,7 +836,7 @@ hr {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: rgb(87 87 91 / 62%);
+  background-color: rgba(30, 67, 115, 0.82);
   color: #fff;
   cursor: pointer;
   padding: 15px;
@@ -346,7 +847,7 @@ hr {
   height: 50px;
 }
 .gotoTopBtn:hover {
-  background-color: rgb(87 87 91 / 86%);
+  background-color: #1e4373;
 }
 .gotoTopBtn i {
   vertical-align: top;
@@ -401,13 +902,19 @@ hr {
 .ai-skills {
   /* background: linear-gradient(#c6d1db, #d8eaf6, #f1f1f1); */
   background: linear-gradient(0.46turn, #c6d1db, #f0f9ff, #f1f1f1);
-  padding: 12px 24px 24px 24px;
+  /* Side padding matches the hero (5%) so both sections share the same content edge */
+  padding: 12px 5% 28px;
   border-bottom: 1px dashed #e1e5e7;
   font-size: 14px;
 }
+.ai-skills .w3-row-padding,
+.ai-skills .w3-row-padding > .w3-col {
+  padding-left: 0;
+  padding-right: 0;
+}
 .ai-skills p {
   color: rgb(87 87 91 / 86%);
-  margin: 12px 0 6px 12px;
+  margin: 22px 0 8px 0; /* group rhythm: big gap above, tight to its own bar, aligned left */
 }
 .w3-padding-large {
   padding: 0px 24px!important;
@@ -417,7 +924,11 @@ hr {
   font-size: 30px!important;
 }
 .aiPhoto-mobile {
-  width:88px;
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
 }
 .w3-margin {
   margin: 15px 15px 0 0!important;
@@ -425,13 +936,15 @@ hr {
 .about-title,
 .about-subtitle,
 .technical-tiltle {
-  padding-left: 8px;
+  padding-left: 0;
+  /* Whisper of white glow lifts the title off the gradient */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55), 0 0 14px rgba(255, 255, 255, 0.65);
 }
 .w3-round, .w3-round-medium {
   border-radius: 28px;
 }
 
-@media (max-width: 993px) {
+@media (max-width: 992px) {
   .ai-round {
     border-radius: 50%;
     width: 41%;
@@ -453,7 +966,7 @@ hr {
     margin-bottom: 10px;
   }
   .thesis-subtitle {
-    margin: 8px 0 8p 0px;
+    margin: 8px 0 8px 0;
     font-size: 16px;
   }
   .thesis-subtitle-keyword {
@@ -468,7 +981,7 @@ hr {
 @media (max-width: 600px){
   .w3-third {
     float: left;
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -476,5 +989,89 @@ hr {
   .fancybox-close {
     top: 8%;
     right: -2.5%;
+  }
+}
+
+/* One shared content edge: project sections + thesis align with the hero (5%) */
+.w3-main .w3-grayscale-min.w3-padding-large {
+  padding-left: calc(5% - 8px) !important;
+  padding-right: calc(5% - 8px) !important;
+}
+.thesis-container {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+@media (max-width: 992px) {
+  .w3-main .w3-grayscale-min.w3-padding-large {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .thesis-container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* Current-role cards: horizontal carousel (3 visible, arrow reveals the 4th) */
+.carousel-wrap {
+  position: relative;
+}
+.card-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.card-carousel::-webkit-scrollbar {
+  display: none;
+}
+.card-carousel > .w3-third {
+  flex: 0 0 auto;
+}
+.car-arrow {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #c8ddef;
+  color: #1e4373;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(30, 67, 115, 0.18);
+  z-index: 5;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+.car-arrow:hover {
+  background: #0087DC;
+  color: #fff;
+  border-color: #0087DC;
+}
+.car-prev {
+  left: 4px;
+  display: none;
+}
+.car-next {
+  right: 4px;
+}
+
+/* Mobile: cards stack vertically (carousel is a desktop pattern) */
+@media (max-width: 600px) {
+  .card-carousel {
+    display: block;
+    overflow-x: visible;
+  }
+  .card-carousel > .w3-third {
+    margin-bottom: 16px; /* consistent gap when stacked */
+  }
+  .car-arrow {
+    display: none !important;
   }
 }
