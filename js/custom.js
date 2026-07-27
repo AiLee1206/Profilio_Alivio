@@ -33,11 +33,11 @@ function onClick(element) {
 
 // 作品集選單開闔
 $('#careers').click(function(){
-  $(this).parent().find('ul').toggle('slow');
+  $(this).parent().toggleClass('collapsed');
   /* parent父元素-往上  find後代 往下 */         
 });
 $('#personalJobs').click(function(){
-  $(this).parent().find('ul').toggle('slow');         
+  $(this).parent().toggleClass('collapsed');         
 });
 
 // go to top
@@ -88,8 +88,27 @@ var galleries = {
     { src: "images/ai_6_design_states.jpg", caption: "Design process &mdash; state variants explored in Figma (individual / outlier &times; progress / error)" }
   ],
   jet: [
-    { src: "images/jet_1_dashboard.jpg", caption: "Control center &mdash; device setup, test tree &amp; one-click automated sweep sequence" },
-    { src: "images/jet_2_pass.jpg",      caption: "Live run &mdash; real-time judgment log with an instant PASS verdict" }
+    { src: "images/jet_1_dashboard.jpg", caption: "Control center &mdash; connectivity, power-meter channel mapping, inverter setup &amp; the automated test tree (one-click sweep)" },
+    { src: "images/jet_2_pass.jpg",      caption: "Live run &mdash; real-time judgment log (Modbus power, PF, THD, IHDF criteria) with an instant PASS verdict" },
+    { src: "images/jet_3_hardware.jpg",  caption: "Hardware setup &mdash; instrument discovery &amp; SCPI resource binding (AC source, power meter, oscilloscope, DC source)" },
+    { src: "images/jet_5_control.jpg",   caption: "Manual control &mdash; AC &amp; DC (SAS) source panel for ad-hoc bring-up and debugging" },
+    { src: "images/jet_4_meter.jpg",     caption: "Meter panel &mdash; live 6-element power readings with one-tap Update &amp; Init" },
+    { src: "images/jet_6_other.jpg",     caption: "Other functions &mdash; DIP voltage-dip loop test (simulates a momentary AC sag to verify PCS response)" }
+  ],
+  ivs: [
+    { src: "images/ACTi_04.jpg", caption: "Missing-object detection &mdash; triggers a voice alert when an object goes missing (banks, markets)" },
+    { src: "images/ACTi_08.jpg", caption: "Audio playback alerts &mdash; for venues such as banks and markets" },
+    { src: "images/ACTi_09.jpg", caption: "Full function set &mdash; overview of all Algorithm Settings icons" }
+  ],
+  actiux: [
+    { src: "images/sketch.jpg",  caption: "Hand-drawn wireframes &mdash; early ideation of every screen &amp; state" },
+    { src: "images/ACTi_06.jpg", caption: "End-to-end UX flow &mdash; Sites &rarr; Camera List &rarr; Live View &rarr; Playback, mapped screen by screen" },
+    { src: "images/ACTi_05.jpg", caption: "Final mobile UI &mdash; ACTi surveillance client for iPad, iPhone &amp; Android" }
+  ],
+  smarthome: [
+    { src: "images/sh_2_control.jpg",    caption: "One-tap control &mdash; lighting, energy (EV / home battery) and appliances (HVAC, washer), grouped by room" },
+    { src: "images/sh_3_livemode.jpg",   caption: "Live Mode &mdash; routine, weekend &amp; travel schedules that shift consumption around solar" },
+    { src: "images/sh_4_hems.jpg",       caption: "HEMS architecture &mdash; app, cloud, HomeKit, EV + V2H, battery &amp; AI appliances in one home-energy loop" }
   ],
   vue: [
     { src: "images/vue_1_dashboard.png", caption: "Dashboard &mdash; real-time fleet power curve, utilization gauge &amp; KPI cards (dark mode)" },
@@ -192,4 +211,46 @@ function scrollCarousel(dir) {
   c.addEventListener('scroll', updateArrows);
   window.addEventListener('resize', updateArrows);
   updateArrows();
+})();
+
+
+// Uniform cards: clamp long project descriptions with a Read more toggle
+(function () {
+  document.querySelectorAll('.ai-content').forEach(function (content) {
+    var p = content.querySelector('p');
+    if (!p || p.querySelector('.gallery-hint')) return; // carousel cards use equal-height layout
+    p.classList.add('card-desc');
+    if (p.scrollHeight - p.clientHeight > 4) {
+      var more = document.createElement('span');
+      more.className = 'read-more';
+      more.textContent = 'Read more';
+      more.addEventListener('click', function () {
+        var open = p.classList.toggle('expanded');
+        more.textContent = open ? 'Show less' : 'Read more';
+      });
+      p.insertAdjacentElement('afterend', more);
+    }
+  });
+})();
+
+
+// Footer: keep the copyright year current automatically (falls back to the hardcoded 2026 if JS is off)
+(function () {
+  var y = document.getElementById('footer-year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
+
+// Thesis abstract: reveal paragraphs 2-3 with an inline toggle after the first paragraph
+(function () {
+  var toggle = document.querySelector('.thesis-toggle');
+  var abstract = document.querySelector('.thesis-abstract');
+  if (!toggle || !abstract) return;
+  function flip() {
+    var open = abstract.classList.toggle('expanded');
+    toggle.textContent = open ? 'Show less' : 'Read full abstract';
+  }
+  toggle.addEventListener('click', flip);
+  toggle.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
+  });
 })();

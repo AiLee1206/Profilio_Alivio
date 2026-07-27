@@ -1,5 +1,5 @@
 body,h1,h2,h3,h4,h5,h6 {
-  font-family: Helvetica,Verdana,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 .w3-grayscale-min {
   filter: grayscale(0%)!important;
@@ -44,6 +44,18 @@ body,h1,h2,h3,h4,h5,h6 {
 }
 .font-small {
   font-size: 16px;
+}
+@media (max-width: 600px) {
+  /* Mobile: drop the role/period onto its own line so it reads as a subtitle
+     instead of wrapping mid-phrase after the company name. */
+  h2 .font-small {
+    display: block;
+    font-size: 13.5px;
+    line-height: 1.35;
+    margin-top: 4px;
+    font-weight: 400;
+    color: #6b7a8d;
+  }
 }
 /* Sidebar nav: glide to sections instead of jumping */
 html {
@@ -139,7 +151,7 @@ html {
   color: #474648e6!important;
 }
 .w3-container h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica,Verdana,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 10px 0 0 0;
 }
@@ -158,7 +170,13 @@ html {
   color: rgb(87 87 91 / 86%);
 }
 .thesis-container {
+  /* Same section-gradient as the intro (自介) so Thesis reads as its own block, set off from Awards above.
+     Top layer fades the whole bottom edge into the page gray (#f1f1f1) so the block melts in — no hard seam. */
+  background:
+    linear-gradient(to bottom, rgba(241, 241, 241, 0) 62%, #f1f1f1 100%),
+    linear-gradient(0.56turn, #c6d1db, #f0f9ff, #f1f1f1);
   border-top: 1px dashed #d8e0e5;
+  margin-top: 34px;   /* gray gap so the Thesis block doesn't stick to the Awards cards above */
 }
 .ai-dark-blue {
   color: #fff;
@@ -210,13 +228,17 @@ html {
 /* Current-role energy cards: keep the 3 mixed portrait/landscape shots the same height.
    center 30% = show the upper-middle of portrait phone shots (main content, not the status bar) */
 #delta_energy .image-size {
-  height: 240px;
-  object-fit: cover;
-  object-position: center 30%;
+  height: 230px;
+  object-fit: contain;      /* show the whole screenshot, no cropping */
+  object-position: center;
+  background: #f7f9fb;       /* soft frame around the artwork */
+  border: 1px solid #e9eef3;
+  border-radius: 8px;
+  padding: 12px;
 }
 @media (max-width: 600px) {
   #delta_energy .image-size {
-    height: 320px;
+    height: 260px;
   }
 }
 
@@ -261,7 +283,7 @@ header#portfolio .has-tip {
   font-weight: 600;
   letter-spacing: 0.14em; /* wider tracking = engraved-label elegance */
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   margin: 0 0 12px;
 }
 
@@ -269,6 +291,9 @@ header#portfolio .has-tip {
 .w3-grayscale-min h2,
 .thesis-container h2 {
   margin-top: 26px;
+}
+.thesis-container h2 {
+  color: #22303d; /* dark enough that the soft glow lifts it rather than washing it out */
 }
 .ai-hero-avatar {
   width: 88px;
@@ -282,7 +307,7 @@ header#portfolio .has-tip {
 .aiLogo-solo {
   display: block;
   width: 52%;
-  margin: 10px auto 4px;
+  margin: 30px auto 6px; /* breathing room above the brand mark */
 }
 .ai-hero-title {
   font-size: 44px;
@@ -299,10 +324,10 @@ header#portfolio .has-tip {
 }
 .ai-hero-sub {
   max-width: 660px;
-  font-size: 17px;
-  line-height: 1.65;
-  color: #5b6570;
-  margin: 0 0 26px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #46515e; /* same size as story, slightly darker = gentle emphasis */
+  margin: 0 0 16px;
 }
 .ai-hero-flex {
   display: flex;
@@ -330,9 +355,9 @@ header#portfolio .has-tip {
 }
 .ai-hero-story {
   max-width: 640px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
-  color: #5b6570;
+  color: #6b7480; /* same size, lighter = supporting detail */
   margin: 0 0 24px;
 }
 .ai-hero-cta {
@@ -732,10 +757,24 @@ a.pdf-corner:hover::after {
 .footer {
   background-color: #eef2f6;
   border-top: 1px solid #d8e0e5;
-  padding: 10px 0 12px;
+  padding: 14px 20px 16px;
   margin-top: 20px;
   font-size: 12px;
   color: #767474;
+  text-align: center;
+}
+.footer-copy {
+  font-size: 12px;
+  color: #5b636e;   /* was #8a9099 — too light on the #eef2f6 footer */
+}
+.footer-copy a {
+  color: #3f4956;   /* the name reads a touch darker so it still stands out as a link */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+.footer-copy a:hover {
+  border-bottom-color: #5a6b7a;
 }
 .ai-margin {
   margin-left: 2px;
@@ -786,10 +825,10 @@ hr {
   border-radius: 50%;
 }
 /* Thesis style */
-.thesis-subtitle {
-  color: #3371A5;
-  margin: 0 0 0 19px;
-  font-size: 15px;
+.thesis-container .thesis-subtitle {
+  color: #5a6b7a;      /* muted venue / date — one clear step below the paper title */
+  margin: 3px 0 0;
+  font-size: 14px;
 }
 .thesis-subtitle-keyword {
   color: rgb(87 87 91 / 86%);
@@ -800,9 +839,12 @@ hr {
 .gitHubIcon {
   margin-left: 5px;
 }
-.thesis_title {
-  color: #474648;
+.thesis-container .thesis_title {
+  color: #1e2a36;      /* the paper title is the real headline of this block */
   font-weight: 600;
+  font-size: 17px;
+  line-height: 1.45;
+  margin: 18px 0 4px;  /* pull it clear of "Thesis (2020)" above */
 }
 .thesis_keyword {
   color: #3371A5;
@@ -814,12 +856,11 @@ hr {
 }
 .thesis_content {
   border: 1px solid #c6d1db;
-  padding: 18px 18px;
-  color: rgb(87 87 91 / 86%);
-  height: 288px;
-  overflow: scroll;
+  padding: 20px 22px;
+  color: #44474d;   /* darker than the old rgba(87,87,91,.86) — comfortable for a full paragraph of body text */
   background: #fff;
   border-radius: 10px;
+  line-height: 1.75;
 }
 .research-image {
   border-radius: 10px;
@@ -937,8 +978,38 @@ hr {
 .about-subtitle,
 .technical-tiltle {
   padding-left: 0;
-  /* Whisper of white glow lifts the title off the gradient */
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55), 0 0 14px rgba(255, 255, 255, 0.65);
+}
+/* Certifications: a compact chip row under the skill bars (white chips read on the gradient) */
+.skills-certs {
+  margin-top: 18px;
+}
+.certs-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #3371a5;
+  margin: 0 0 8px;
+}
+.certs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.certs-list .tech-tag {
+  font-size: 12px;
+  color: #1e4373;
+  background: #ffffff;
+  border: 1px solid #cdd9e5;
+  padding: 5px 12px;
+  box-shadow: 0 1px 2px rgba(30, 67, 115, 0.06);
+}
+/* White-edge glow — the whisper of white first used on Technical Skills, now on the name
+   and every section title so they lift off the tinted section backgrounds */
+.ai-hero-title,
+h2 {
+  /* Soft lift, not a halo: a big white blur bleeds into the glyphs and washes light titles out */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0 0 6px rgba(255, 255, 255, 0.4);
 }
 .w3-round, .w3-round-medium {
   border-radius: 28px;
@@ -1073,5 +1144,242 @@ hr {
   }
   .car-arrow {
     display: none !important;
+  }
+}
+
+/* Sidebar submenu: smooth CSS expand/collapse (replaces jQuery slide) */
+.careers_li,
+.cpersonalJobs_li {
+  overflow: hidden;
+  max-height: 260px;
+  opacity: 1;
+  transition: max-height 0.3s ease, opacity 0.25s ease, margin 0.3s ease, padding 0.3s ease;
+  will-change: max-height;
+}
+li.collapsed > .careers_li,
+li.collapsed > .cpersonalJobs_li {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* Expand/collapse chevron: rotates in sync with the submenu (down = open, right = closed) */
+.submenu-chevron {
+  float: right;
+  margin-top: 3px;
+  margin-right: 2px;
+  font-size: 15px;
+  color: #9aa4ae;
+  transition: transform 0.3s ease, color 0.18s ease;
+}
+#careers:hover .submenu-chevron,
+#personalJobs:hover .submenu-chevron {
+  color: #1e4373;
+}
+li.collapsed > span > .submenu-chevron {
+  transform: rotate(-90deg);
+}
+
+/* Mobile drawer: keep the PDF button clear of the close (X) button */
+@media (max-width: 992px) {
+  /* Mobile: the PDF lives as a labelled row in the drawer instead */
+  a.pdf-corner {
+    display: none;
+  }
+}
+
+/* Uniform cards: equal-height current-role carousel + tags pinned to the bottom */
+.card-carousel {
+  align-items: stretch;
+}
+.card-carousel > .w3-third.ai-link {
+  display: flex;
+  flex-direction: column;
+}
+.card-carousel .ai-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.card-carousel .ai-content .tech-tags {
+  margin-top: 12px; /* follow the description naturally; extra height falls to the card bottom */
+}
+/* Long descriptions: clamp to 3 lines with a Read more toggle */
+.card-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.card-desc.expanded {
+  -webkit-line-clamp: unset;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0087DC;
+  cursor: pointer;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Side Projects: featured two-column layout (card + intro) */
+.sideproject-featured {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 8px;
+}
+.sideproject-featured .sp-card {
+  flex: 1 1 320px;
+  max-width: 460px;
+  margin: 0;
+}
+.sp-intro {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sp-lead {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e4373;
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+.sp-lead em {
+  font-style: italic;
+  color: #0087DC;
+}
+.sp-body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #5b6570;
+  margin: 0 0 22px;
+  max-width: 460px;
+}
+.sp-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  /* Mobile: featured intro is a desktop pattern — keep just the project card */
+  .sp-intro {
+    display: none;
+  }
+  .sideproject-featured .sp-card {
+    max-width: none;
+  }
+}
+
+/* Thesis: keyword pills + collapsible abstract for a cleaner research card */
+.thesis-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+/* Keyword chips: white on the tinted block so they read as distinct pills, navy text for contrast */
+.thesis-keywords .tech-tag {
+  font-size: 12px;
+  color: #1e4373;
+  background: #ffffff;
+  border: 1px solid #cdd9e5;
+  padding: 5px 12px;
+  box-shadow: 0 1px 2px rgba(30, 67, 115, 0.06);
+}
+/* Abstract: first paragraph is always visible; the rest is revealed by an inline
+   "Read full abstract" toggle that sits right after "…electronic payment market." */
+.thesis-rest {
+  display: none;
+}
+.thesis-abstract.expanded .thesis-rest {
+  display: inline;
+}
+/* Keep the "…" that hints at hidden text; drop it once the full abstract is open */
+.thesis-abstract.expanded .thesis-ellipsis {
+  display: none;
+}
+.thesis-toggle {
+  color: #0087DC;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.thesis-toggle:hover {
+  text-decoration: underline;
+}
+/* No boxy focus ring on mouse click; keep a clean keyboard-only outline for accessibility */
+.thesis-toggle:focus {
+  outline: none;
+}
+.thesis-toggle:focus-visible {
+  outline: 2px solid #0087DC;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+/* Paper title reads as an elegant clickable headline, not a raw hyperlink:
+   a light offset underline that darkens on hover */
+.thesis-container .thesis_title a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 42, 54, 0.28);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+.thesis-container .thesis_title a:hover {
+  text-decoration-color: rgba(30, 42, 54, 0.9);
+}
+/* Abstract text now lives in a wrapper box; drop the <p>'s default margins so it hugs the padding
+   and the "Read full abstract" toggle sits directly under the text, inside the same box. */
+.thesis_content > p {
+  margin: 0;
+}
+
+/* Thesis figures: two equal columns, edges aligned with the abstract above */
+#research {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 0 !important;
+  margin-top: 20px;
+}
+/* W3.CSS adds clearfix ::before/::after (content:""; display:table). In a grid those
+   count as two extra items, forcing a 2x2 grid that staggers the figures diagonally. Remove them. */
+#research::before,
+#research::after {
+  content: none;
+}
+#research > .w3-col {
+  width: auto !important;
+  min-width: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+}
+#research .research-image {
+  display: block;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+  border: 1px solid #e9eef3;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  #research {
+    flex-direction: column;
+    gap: 14px;
   }
 }
