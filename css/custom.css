@@ -237,8 +237,12 @@ html {
   padding: 12px;
 }
 @media (max-width: 600px) {
+  /* Mobile: cards are full-width, so let each screenshot sit at its natural height
+     (no fixed box) — a tight frame instead of a tall letterboxed one. */
   #delta_energy .image-size {
-    height: 260px;
+    height: auto;
+    max-height: 340px;
+    padding: 10px;
   }
 }
 
