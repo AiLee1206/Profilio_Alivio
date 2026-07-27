@@ -23,15 +23,13 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PEMW6XS774');
-  </script> 
-  <style>
-    body{
-      background-color:skyblue;
-    }
-  </style>
+  </script>
 </head>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Reading progress: the brand energy gradient fills the top edge as you scroll -->
+<div id="scroll-progress" aria-hidden="true"></div>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left ai-margin" style="z-index:3; width:300px;" id="mySidebar">
@@ -172,40 +170,65 @@
   <div class="ai-container ai-skills">
     <div class="w3-row-padding">
       <h2 class="technical-tiltle">Technical Skills</h2>
-      <div class="w3-col m5">
-        <div>
-          <!-- Progress bars / Skills -->
-          <p>UI/UX &amp; Visual Design - Figma, Design System, Photoshop, Illustrator<span class="skill-pct">100%</span></p>
-          <div class="skill-grey skill-white w3-round">
-            <div class="ai-dark-blue skill-padding w3-round" style="width:100%"></div>
-          </div>
-          <p>HTML5, CSS3, RWD<span class="skill-pct">98%</span></p>
-          <div class="skill-grey skill-white w3-round">
-            <div class="ai-dark-blue skill-padding w3-round" style="width:98%"></div>
-          </div>
-          <p>JavaScript / TypeScript - React, Vue<span class="skill-pct">85%</span></p>
-          <div class="skill-grey skill-white w3-round">
-            <div class="ai-dark-blue skill-padding w3-round" style="width:85%"></div>
+      <!-- Grouped capability tags (unranked) — same chip language as Certifications -->
+      <div class="skills-groups">
+        <div class="skill-group">
+          <p class="skill-group-label">UX Methods</p>
+          <div class="skill-group-tags">
+            <!-- Ordered as the real UX process: research → flows → wireframe → prototype → test -->
+            <span class="tech-tag">User Research</span>
+            <span class="tech-tag">User Flows</span>
+            <span class="tech-tag">Wireframing</span>
+            <span class="tech-tag">Prototyping</span>
+            <span class="tech-tag">A/B Testing</span>
+            <span class="tech-tag">Design System</span>
           </div>
         </div>
-      </div>
-      <div class="w3-col m5">
-        <p>Data Visualization - ECharts, Syncfusion<span class="skill-pct">85%</span></p>
-        <div class="skill-grey skill-white w3-round">
-          <div class="ai-dark-blue skill-padding w3-round" style="width:85%"></div>
+        <div class="skill-group">
+          <p class="skill-group-label">Design Tools</p>
+          <div class="skill-group-tags">
+            <span class="tech-tag">Figma</span>
+            <span class="tech-tag">Sketch</span>
+            <span class="tech-tag">Adobe XD</span>
+            <span class="tech-tag">Photoshop</span>
+            <span class="tech-tag">Illustrator</span>
+          </div>
         </div>
-        <p>Git, Scrum, RESTful API<span class="skill-pct">85%</span></p>
-        <div class="skill-grey skill-white w3-round">
-          <div class="ai-dark-blue skill-padding w3-round" style="width:85%"></div>
+        <div class="skill-group">
+          <p class="skill-group-label">Front-End</p>
+          <div class="skill-group-tags">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">RWD</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Vue</span>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="skills-certs">
-      <p class="certs-label">Certifications</p>
-      <div class="certs-list">
-        <span class="tech-tag">LinkedIn - CSS</span>
-        <span class="tech-tag">Google Analytics (2021)</span>
-        <span class="tech-tag">Full-Stack Web Training (2020)</span>
+        <div class="skill-group">
+          <p class="skill-group-label">Data Visualization</p>
+          <div class="skill-group-tags">
+            <span class="tech-tag">ECharts</span>
+            <span class="tech-tag">Syncfusion</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Workflow &amp; Integration</p>
+          <div class="skill-group-tags">
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">Scrum</span>
+            <span class="tech-tag">RESTful API</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Certifications</p>
+          <div class="skill-group-tags">
+            <span class="tech-tag">LinkedIn - CSS</span>
+            <span class="tech-tag">Google Analytics (2021)</span>
+            <span class="tech-tag">Full-Stack Web Training (2020)</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -227,6 +250,7 @@
         </a>
         <p>Designed &amp; built end-to-end: one-click JET (Japan grid-code) compliance testing for single-phase PV inverters &mdash; automated sweep sequences, live pass / fail logging, and full instrument control (AC / DC source, power meter, oscilloscope).
         <br><span class="gallery-hint" onclick="openGallery('jet',0)">&#9654; Walk through the app &middot; 6 screens</span></p>
+        <div class="impact-chip"><i class="fa fa-bolt"></i>Designed &amp; coded end-to-end</div>
         <div class="tech-tags">
           <span class="tech-tag">C# / .NET</span><span class="tech-tag">WPF UI</span><span class="tech-tag">SCPI Instruments</span><span class="tech-tag">Modbus</span>
         </div>
@@ -238,8 +262,9 @@
         <a href="#" onclick="openGallery('ul',0);return false;">
           <h6 class="font-bold">Energy Monitoring App (Delta)</h6>
         </a>
-        <p>Owned the UI &amp; market research for the UL (US-market) energy monitoring app, including a multi-site view for deploying and managing many plants. Praised at an energy expo for its clear interface and smooth flow.
+        <p>Owned the UI &amp; market research for the UL (US-market) energy monitoring app, including a multi-site view for deploying and managing many plants.
         <br><span class="gallery-hint" onclick="openGallery('ul',0)">&#9654; Walk through the app &middot; 5 screens</span></p>
+        <div class="impact-chip"><i class="fa fa-star"></i>Praised at an energy expo</div>
         <div class="tech-tags">
           <span class="tech-tag">Figma</span><span class="tech-tag">UX Flow</span><span class="tech-tag">UI Spec</span><span class="tech-tag">Market Research</span>
         </div>
@@ -313,6 +338,7 @@
           <h6 class="font-bold">Cloud Monitoring Dashboard (Delta)</h6>
         </a>
         <p>Designed the cloud monitoring web dashboard &mdash; real-time energy overview, a plant leaderboard, a fleet map, and carbon-savings tracking across many solar plants (multiple inverters &amp; data collectors).</p>
+        <div class="impact-chip"><i class="fa fa-globe"></i>Shipped to US &middot; Europe &middot; Asia</div>
       </div>
     </div>
     <div class="w3-third w3-container ai-link">
@@ -322,6 +348,7 @@
           <h6 class="font-bold">App: Solar Monitor (Delta)</h6>
         </a>
         <p>Designed the Solar Monitor mobile app &mdash; remote energy monitoring with a calendar view for querying up to 20 years of inverter data (by day, month, or year).</p>
+        <div class="impact-chip"><i class="fa fa-line-chart"></i>+20% user rate &middot; Japan market</div>
       </div>
     </div>
   </div>
@@ -340,6 +367,7 @@
           <h6 class="font-bold">EVGA Official Website (EVGA)</h6>
         </a>
         <p>Created and designed the EVGA official website and promoted NVIDIA bundles. Designed all graphics card pages on Amazon/JD.com.</p>
+        <div class="impact-chip"><i class="fa fa-language"></i>Global RWD redesign &middot; 8 languages</div>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
@@ -375,10 +403,7 @@
         <a href="https://www.acti.com" target="_blank" rel="noopener noreferrer">
           <h6 class="font-bold">NVR Server for PC, iPad, iPhone & Android (ACTi)</h6>
         </a>
-        <p>Product: NVR server + Web client + Mobile client
-           User: Administrator / Supervisor / Manager / Security Officer
-           Aim: Manage up to 64 IP cameras or video encoders
-           Structure: Live View, Playback, Setup</p>
+        <p>Designed the NVR suite UI &mdash; server, web and mobile clients &mdash; managing up to 64 IP cameras or video encoders across Live View, Playback and Setup, for roles from administrator to security officer.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom ai-link">
@@ -402,7 +427,7 @@
     </div>
   </div>
 
-  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min">
+  <div class="w3-row-padding w3-padding-large w3-row w3-grayscale-min row-centered">
     <div class="w3-third w3-container w3-margin-bottom ai-link frame">
       <img src="images/ACTi_10.jpg" class="w3-hover-opacity image-size zoomIn" loading="lazy" onclick="onClick(this)" alt="App: Mobile Go (ACTi)">
       <div class="w3-container w3-white ai-content">
@@ -608,7 +633,7 @@
     <h4 class="thesis-subtitle">National Yunlin University of Science & Technology, Master of Information Technology - 30 Jun 2020</h4>
 
     <div class="thesis-keywords">
-      <span class="tech-tag">PX Mart</span><span class="tech-tag">PX Pay</span><span class="tech-tag">E-commerce Success Model</span><span class="tech-tag">Structural Equation Model</span>
+      <span class="tech-tag">PX Mart</span><span class="tech-tag">PX Pay</span><span class="tech-tag">E-commerce Success Model</span><span class="tech-tag">Structural Equation Model</span><span class="tech-tag">524 Valid Responses</span><span class="tech-tag">SPSS &amp; AMOS</span>
     </div>
     <div class="thesis_content">
     <p class="thesis-abstract"><b>ABSTRACT</b> &mdash; Technology has changed consumer lifestyles in recent years. The retail channel incorporates the latest technology to provide options for electronic payment, in-store pickup, and home delivery, thus enhancing the customer experience. This thesis investigated PX Pay, the mobile payment platform of the Taiwanese supermarket chain PX Mart, specifically analyzing intention to use PX Pay. Our findings can aid enterprises in formulating a business model for the electronic payment market.<span class="thesis-ellipsis"> &hellip;</span><span class="thesis-rest"><br><br>

@@ -204,6 +204,19 @@ html {
   text-align: right!important;
   position: relative;
 }
+/* Reading progress: the skill-bar energy gradient reborn as a functional
+   top-edge indicator — the aqua tip leads as the bar fills with scroll */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #3371a5, #0087DC 88%, #64D7D7 100%);
+  border-radius: 0 2px 2px 0;
+  z-index: 60;
+  pointer-events: none;
+}
 
 .skill-padding {
   padding: 0;
@@ -490,6 +503,25 @@ button:focus-visible,
 .ai-slider::-webkit-scrollbar-thumb:hover {
   background: #a7b4c2;
 }
+/* Main page scrollbar: same muted treatment as the sidebar's, so the two
+   rails match (slightly wider for the long main scroll) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #c4cfda transparent;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #c4cfda;
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: #a7b4c2;
+}
 
 /* Desktop: logo fixed on top, only the nav (below the divider) scrolls,
    social row stays pinned at the bottom — scrollbar spans the nav only */
@@ -692,6 +724,37 @@ a.pdf-corner:hover::after {
   border: 1px solid #dbe7f0;
   padding: 3px 10px;
   border-radius: 999px;
+}
+/* Result badge: one verifiable outcome per card, surfaced at a glance.
+   Delta-blue tint (vs the grey-blue tech-tags) so a scanning eye lands on
+   the numbers instead of digging them out of the prose. */
+.impact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0072ba;
+  background: #eaf5fd;
+  border: 1px solid #bfe0f5;
+  border-radius: 999px;
+  padding: 4px 13px;
+  margin: 0 0 12px;
+}
+.impact-chip .fa {
+  font-size: 12px;
+}
+/* A 2-card leftover row under a 3-card row: center it so the layout reads as
+   intentional (pyramid), not as a hole on the right. content:none kills the
+   W3.CSS clearfix pseudo-elements that would join the flex row as ghost items. */
+.row-centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.row-centered::before,
+.row-centered::after {
+  content: none;
 }
 .gallery-hint:hover {
   text-decoration: underline;
@@ -1001,30 +1064,57 @@ hr {
 .technical-tiltle {
   padding-left: 0;
 }
-/* Certifications: a compact chip row under the skill bars (white chips read on the gradient) */
-.skills-certs {
-  margin-top: 18px;
+/* Technical Skills: grouped capability tags (unranked), definition-list style —
+   a fixed label column with every chip row starting on the same vertical line,
+   Certifications included as the last row. One alignment spine = calm, not
+   scattered. Shared chip language (white chips read on the gradient). */
+.skills-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 13px;
+  max-width: 1080px;
+  margin-top: 20px; /* breathing room under the "Technical Skills" title */
 }
-.certs-label {
-  font-size: 12px;
+.skill-group {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  column-gap: 20px;
+  align-items: start;
+}
+/* .ai-skills prefix: outranks the generic ".ai-skills p" grey/margin rule */
+.ai-skills .skill-group-label {
+  font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #3371a5;
-  margin: 0 0 8px;
+  margin: 0;
+  padding-top: 5px; /* optically centers the label on the first chip row */
 }
-.certs-list {
+.skill-group-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-.certs-list .tech-tag {
+.skill-group-tags .tech-tag {
   font-size: 12px;
   color: #1e4373;
   background: #ffffff;
   border: 1px solid #cdd9e5;
   padding: 5px 12px;
   box-shadow: 0 1px 2px rgba(30, 67, 115, 0.06);
+}
+@media (max-width: 600px) {
+  .skill-group {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+  .ai-skills .skill-group-label {
+    padding-top: 0;
+  }
+  .skills-groups {
+    gap: 16px;
+  }
 }
 /* White-edge glow — the whisper of white first used on Technical Skills, now on the name
    and every section title so they lift off the tinted section backgrounds */
