@@ -46,15 +46,33 @@ body,h1,h2,h3,h4,h5,h6 {
   font-size: 16px;
 }
 @media (max-width: 600px) {
-  /* Mobile: drop the role/period onto its own line so it reads as a subtitle
-     instead of wrapping mid-phrase after the company name. */
+  /* Mobile: the "- " hangs to the left as a separator, and the role name +
+     year stack to its right — both aligned to the name's start, so the year
+     lines up under "Senior…" rather than under the dash. Same colour as the
+     title, just a touch smaller than the 30px company name. */
   h2 .font-small {
-    display: block;
-    font-size: 13.5px;
-    line-height: 1.35;
+    display: flex;
+    align-items: baseline;
+    font-size: 15px;
+    line-height: 1.4;
     margin-top: 4px;
     font-weight: 400;
-    color: #6b7a8d;
+  }
+  h2 .font-small .role-lead {
+    white-space: pre;   /* keep the space after the dash */
+  }
+  h2 .font-small .role-body {
+    min-width: 0;       /* let a long role name wrap instead of overflowing */
+  }
+  h2 .font-small .role-years {
+    display: block;
+  }
+  /* Breathing room between the header and the card below it. Uses padding, not
+     margin: the h2 sits inside wrapper <div>s, so its bottom margin collapses
+     through them and produced almost no visible gap. Padding never collapses,
+     so it reliably pushes the card down. */
+  h2 {
+    padding-bottom: 8px;
   }
 }
 /* Sidebar nav: glide to sections instead of jumping */
