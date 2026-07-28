@@ -1114,6 +1114,7 @@ hr {
   }
   .skills-groups {
     gap: 16px;
+    margin-top: 4px; /* phone: tuck in close under the title, matching the hero's tight rhythm */
   }
 }
 /* White-edge glow — the whisper of white first used on Technical Skills, now on the name
